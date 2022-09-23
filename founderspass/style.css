@@ -1,0 +1,1369 @@
+*:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: revert;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+textarea {
+  white-space: revert;
+}
+
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+::-moz-placeholder {
+  color: unset;
+}
+
+:-ms-input-placeholder {
+  color: unset;
+}
+
+::placeholder {
+  color: unset;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([contenteditable]) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+}
+
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --pink: #ff30ff;
+  --grey: #838383;
+  --light-grey: #c7c7c7;
+  --lightest-grey: #f2f2f2;
+  --f-pir: pirulen, sans-serif;
+  --f-fut: futura-pt, sans-serif;
+  --f-fut-bold: futura-pt-bold;
+  --f-fut-cond: futura-pt-condensed, sans-serif;
+  --unit-small: 24px;
+  --unit-mid: 48px;
+  --unit-big: 64px;
+  --unit-huge: 120px;
+  --radius: 5px;
+  --overlay-opacity: 0.2;
+  --contained: 1280px;
+  --thickness: 3px;
+  --dur: 0.75s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: normal 500 20px/1.25 var(--f-fut);
+  color: white;
+}
+@media (max-width: 560px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+#Masthead,
+#Site-Footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: white;
+  background: black;
+  fill: white;
+  padding: 20px var(--unit-small);
+}
+@media (max-width: 1200px) {
+  #Masthead,
+#Site-Footer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 560px) {
+  #Masthead,
+#Site-Footer {
+    padding-inline: 16px;
+  }
+}
+
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#Site-Footer {
+  gap: var(--unit-mid);
+  text-transform: uppercase;
+  font-size: 15px;
+}
+#Site-Footer .social {
+  margin-right: auto;
+}
+@media (max-width: 1200px) {
+  #Site-Footer {
+    gap: 20px;
+  }
+  #Site-Footer .social {
+    margin-right: initial;
+  }
+}
+
+#Masthead {
+  font: 12px/1 var(--f-pir);
+  margin-bottom: 2px;
+  z-index: 2147483647;
+}
+#Masthead > * {
+  order: 1;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  #Masthead {
+    flex-direction: column;
+  }
+  #Masthead #Main-Nav {
+    order: 2;
+  }
+  #Masthead #Logo {
+    position: relative;
+    transform: none;
+    left: auto;
+    width: min(400px, 100%);
+  }
+  #Masthead .social {
+    order: 0;
+  }
+}
+
+#Main-Nav {
+  display: inherit;
+  gap: var(--unit-small);
+}
+#Main-Nav a {
+  transition: var(--dur);
+}
+#Main-Nav a:hover {
+  color: var(--pink);
+}
+
+#Logo {
+  width: min(280px, 100%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.social svg {
+  transition: var(--dur);
+}
+.social svg:hover {
+  fill: var(--pink);
+}
+
+#Site {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 4px;
+  background: black;
+}
+
+.img-bg {
+  position: relative;
+  overflow: hidden;
+}
+.img-bg > * {
+  position: relative;
+  z-index: 1;
+}
+.img-bg:hover {
+  --overlay-opacity: 0.125;
+}
+.img-bg:hover::before {
+  filter: blur(2px) saturate(3);
+}
+.img-bg:hover .frosted {
+  background: rgba(255, 255, 255, 0.125);
+}
+.img-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transition: var(--dur);
+  opacity: var(--overlay-opacity);
+}
+
+#Hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  padding-inline: var(--unit-mid);
+}
+#Hero [class*=button] {
+  justify-self: flex-end;
+  margin-top: auto;
+}
+#Hero::before {
+  background: white url("https://playerzero.xyz/i/pz-hero.webp") no-repeat center center/cover;
+}
+
+#PZ-Mark {
+  width: min(960px, 100%);
+  fill: white;
+  margin-block: 200px;
+}
+
+#Countdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  padding-block: 12px;
+  text-align: center;
+  color: black;
+  background: white;
+  font-size: 28px;
+  line-height: 1;
+}
+@media (max-width: 560px) {
+  #Countdown {
+    font-size: 24px;
+  }
+}
+
+#Countdown-Timer {
+  font-family: var(--f-fut-bold);
+}
+
+.container {
+  margin-inline: auto;
+  width: min(var(--contained), 100%);
+}
+
+#Upcoming-Drop::before {
+  background: black url("https://playerzero.xyz/i/pz-upcoming-bg.webp") no-repeat center center/cover;
+}
+#Upcoming-Drop .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+#Upcoming-Drop .container .left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--unit-big);
+}
+@media (max-width: 1200px) {
+  #Upcoming-Drop .container {
+    gap: 24px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  #Upcoming-Drop .container .left {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+#Upcoming-Drop .item {
+  flex: 1 1 calc(100% / 3 - var(--unit-mid));
+}
+
+#Prism {
+  -webkit-animation: floating 5s infinite linear;
+          animation: floating 5s infinite linear;
+  max-width: 240px;
+}
+#Prism img {
+  transform: scale(1.25);
+}
+@media (max-width: 1200px) {
+  #Prism img {
+    transform: translateY(16px) scale(1.25);
+  }
+}
+@media (max-width: 800px) {
+  #Prism img {
+    transform: translateY(-4px) scale(1);
+  }
+}
+
+#Fvckrender {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  #Fvckrender {
+    align-items: center;
+  }
+}
+#Fvckrender .lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-transform: uppercase;
+}
+@media (max-width: 800px) {
+  #Fvckrender .lockup {
+    align-items: center;
+    text-align: center;
+  }
+}
+#Fvckrender .lockup span:last-of-type {
+  font: italic 800 64px/0.8 var(--f-fut-cond);
+  margin-top: 4px;
+}
+@media (max-width: 560px) {
+  #Fvckrender .lockup span:last-of-type {
+    font-size: 48px;
+  }
+}
+#Fvckrender .lockup.top span:first-of-type {
+  font: 24px/1 var(--f-pir);
+  margin-bottom: 1px;
+}
+#Fvckrender .lockup.top span:last-of-type {
+  white-space: nowrap;
+}
+#Fvckrender .lockup.bottom span:first-of-type {
+  font: italic 800 28px/1 var(--f-fut-cond);
+}
+#Fvckrender .lockup.bottom span:last-of-type {
+  color: var(--pink);
+}
+
+.frosted {
+  padding: var(--unit-small);
+  border: var(--thickness) solid white;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  border-radius: var(--radius);
+  transition: var(--dur);
+}
+.frosted [class*=button] {
+  margin-top: 8px;
+}
+
+#Pass-Intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 12px;
+}
+@media (max-width: 1200px) {
+  #Pass-Intro {
+    max-width: 560px;
+    margin-inline: auto;
+    margin-top: var(--unit-mid);
+  }
+}
+
+h3 {
+  font: 700 48px/0.88 var(--f-fut-cond);
+  text-transform: uppercase;
+}
+
+section {
+  padding: var(--unit-mid) var(--unit-small);
+}
+@media (max-width: 560px) {
+  section {
+    padding-inline: 16px;
+  }
+}
+
+.small {
+  font-size: 16px;
+}
+
+.section-label {
+  font: 16px/1 var(--f-pir);
+}
+
+[class*=button] {
+  font: 24px/1 var(--f-pir);
+  color: white;
+  border: var(--thickness) solid white;
+  text-align: center;
+  padding: 8px var(--unit-small) !important;
+  border-radius: var(--radius);
+  transition: var(--dur);
+  cursor: pointer;
+}
+[class*=button]:hover {
+  background: white !important;
+  color: black;
+}
+@media (max-width: 560px) {
+  [class*=button] {
+    font-size: 16px;
+  }
+}
+
+.button--small {
+  font-size: 15px;
+  background-color:#ff30ff;
+}
+
+h2 {
+  font: italic 800 80px/0.8 var(--f-fut-cond);
+  text-transform: uppercase;
+  color: black;
+}
+@media (max-width: 800px) {
+  h2 {
+    font-size: 64px;
+  }
+}
+
+#Characters {
+  background: white url("https://playerzero.xyz/i/pz-treads.png") no-repeat center center/cover;
+  color: var(--grey);
+}
+#Characters p {
+  max-width: 44ch;
+}
+#Characters .h2-sub {
+  font: 22px/1 var(--f-pir);
+  display: block;
+}
+#Characters .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+@media (max-width: 1200px) {
+  #Characters .container {
+    flex-direction: column;
+  }
+}
+
+#Explore {
+  order: 1;
+}
+#Explore header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#Explore header p {
+  color: black;
+}
+@media (max-width: 1200px) {
+  #Explore {
+    text-align: center;
+  }
+  #Explore p {
+    margin-inline: auto;
+  }
+}
+
+#Data-Graphic {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  aspect-ratio: 1;
+  overflow: visible;
+  border-radius: var(--radius);
+  position: relative;
+  z-index: 1;
+  order: 2;
+  width: min(400px, 100%);
+  max-width: 400px;
+}
+@media (max-width: 1200px) {
+  #Data-Graphic {
+    order: 0;
+  }
+}
+
+
+#Graphic-Cyber-Brokers2 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#Graphic-Cyber-Brokers img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#Upcoming-Drop,
+#Characters {
+  padding-inline: 80px;
+}
+@media (max-width: 1200px) {
+  #Upcoming-Drop,
+#Characters {
+    padding-inline: var(--unit-mid);
+  }
+}
+@media (max-width: 800px) {
+  #Upcoming-Drop,
+#Characters {
+    padding-inline: var(--unit-small);
+  }
+}
+#Upcoming-Drop .container .left,
+#Characters .container .left {
+  flex: 2;
+}
+#Upcoming-Drop .container .right,
+#Characters .container .right {
+  flex: 1;
+}
+
+@-webkit-keyframes floating {
+  0%, 100% {
+    transform: translateY(4px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(4px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+.tabs {
+  --tab-color: var(--light-grey);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--unit-big);
+  margin-top: var(--unit-mid);
+  margin-bottom: 80px;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .tabs {
+    justify-content: center;
+  }
+}
+@media (max-width: 560px) {
+  .tabs {
+    gap: var(--unit-mid);
+  }
+}
+.tabs::after {
+  content: "";
+  height: var(--thickness);
+  width: 500%;
+  position: absolute;
+  bottom: calc(var(--thickness) * -1);
+  background: var(--tab-color);
+  z-index: 0;
+  transform: translateX(-20%);
+}
+
+.tab-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font: 20px/0.9 var(--f-pir);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  color: var(--tab-color);
+  transition: var(--dur);
+}
+.tab-trigger:hover {
+  --tab-color: var(--grey);
+}
+.tab-trigger:hover .tab-trigger-marker::after {
+  transform: translateX(-50%) scaleY(6);
+}
+@media (max-width: 800px) {
+  .tab-trigger p {
+    display: none;
+  }
+}
+.tab-trigger.active {
+  --tab-color: black;
+}
+.tab-trigger.active .tab-trigger-marker::after {
+  transform: translateX(-50%) scaleY(12);
+}
+
+.tab-trigger-icon {
+  max-width: 40px;
+  fill: var(--tab-color);
+}
+.tab-trigger-icon svg {
+  width: 100%;
+  transition: var(--dur);
+}
+
+.tab-trigger-marker {
+  width: 24px;
+  aspect-ratio: 1;
+  border: var(--thickness) solid var(--tab-color);
+  margin-top: 40px;
+  margin-bottom: -13px;
+  background: white;
+  position: relative;
+  transition: var(--dur);
+}
+.tab-trigger-marker::before, .tab-trigger-marker::after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  background: var(--tab-color);
+}
+.tab-trigger-marker::before {
+  inset: 2px;
+}
+.tab-trigger-marker::after {
+  width: var(--thickness);
+  height: 3px;
+  top: -3px;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) scaleY(1);
+  transition: var(--dur);
+}
+
+.tab-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  color: black;
+  min-height: 160px;
+}
+.tab-data:not(.active) {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .tab-data {
+    align-items: center;
+  }
+}
+
+.tab-graphic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(400px, 100%);
+  max-width: 400px;
+  aspect-ratio: 1;
+  transition: var(--dur);
+  border: var(--thickness) solid var(--light-grey);
+  background: white;
+  position: relative;
+}
+.tab-graphic:not(.active) {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(200%);
+}
+@media (max-width: 1200px) {
+  .tab-graphic:not(.active) {
+    transform: none;
+  }
+}
+
+#Lore,
+#Discord,
+#Newsletter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-block: var(--unit-huge);
+}
+#Lore h2,
+#Discord h2,
+#Newsletter h2 {
+  color: white;
+}
+
+#Lore-Intro,
+#Newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: min(560px, 100%);
+  margin-inline: auto;
+  text-align: center;
+}
+
+#Lore,
+#Team-Hero {
+  --overlay-opacity: 0.65;
+}
+#Lore::before,
+#Team-Hero::before {
+  background: black url("https://playerzero.xyz/i/pz-lore-bg.webp") no-repeat center center/cover;
+}
+#Lore:hover,
+#Team-Hero:hover {
+  --overlay-opacity: 0.35;
+}
+
+
+#Discord,
+#Newsletter {
+  --overlay-opacity: 0.5;
+  width: 100%;
+}
+#Discord:hover,
+#Newsletter:hover {
+  --overlay-opacity: 0.25;
+}
+
+#Discord::before {
+  background: black url("https://playerzero.xyz/i/pz-newsletter-bg.png") no-repeat center center/cover;
+}
+
+#Newsletter .frosted {
+  align-items: flex-start;
+}
+#Newsletter::before {
+  background: black url("https://playerzero.xyz/i/pz-discord-bg.png") no-repeat center center/cover;
+}
+
+#Newsletter-Form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  text-align: left;
+}
+
+.section-group {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  background: black;
+  gap: 4px;
+}
+.section-group section {
+  flex: 1 1 50%;
+}
+@media (max-width: 800px) {
+  .section-group {
+    flex-direction: column;
+  }
+}
+
+.inside-hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--unit-big) var(--unit-small);
+}
+.inside-hero h1 {
+  font: 800 italic 120px/0.85 var(--f-fut);
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (max-width: 560px) {
+  .inside-hero h1 {
+    font-size: 80px;
+  }
+}
+
+#Team-Members {
+  background: white url("https://playerzero.xyz/i/pz-team-bg.png") no-repeat center center/cover;
+  background-blend-mode: luminosity;
+}
+#Team-Members .social {
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.member {
+  color: var(--grey);
+  padding: var(--unit-mid) var(--unit-small);
+  background: rgba(255, 255, 255, 0.5);
+}
+.member + .member {
+  border-top: 4px solid black;
+}
+.member .container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: var(--unit-mid);
+  max-width: 800px;
+}
+@media (max-width: 800px) {
+  .member .container {
+    gap: var(--unit-small);
+  }
+}
+@media (max-width: 560px) {
+  .member .container {
+    flex-direction: column;
+  }
+}
+.member:nth-of-type(even) {
+  background: rgba(0, 0, 0, 0.075);
+}
+
+.member-heads {
+  flex: 1;
+}
+
+.member-headshot {
+  border: var(--thickness) solid var(--light-grey);
+  aspect-ratio: 1;
+}
+.member-headshot img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.member-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.member-name {
+  font: 800 italic 48px/1 var(--f-fut);
+}
+@media (max-width: 560px) {
+  .member-name {
+    font-size: 40px;
+  }
+}
+
+.member-title {
+  font: 20px/1 var(--f-pir);
+}
+
+.member-bio {
+  font-size: 16px;
+}
+
+.img-bg {
+  padding: var(--unit-big) var(--unit-small);
+}
+@media (max-width: 560px) {
+  .img-bg {
+    padding-inline: 16px;
+  }
+}
+
+/* NEO CODE STARTS HERE */
+
+.bidding-interface h3 {
+  font-size: 36px;
+  line-height: 1;
+}
+.bidding-interface h3 + p {
+  margin-top: 16px;
+}
+
+
+.bidding-interface .magic-height2 {
+  --height: 240px;
+  padding-block: var(--unit-bigger);
+  overflow: visible;
+  min-height: var(--height);
+}
+
+.bidding-interface .magic-height2 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  min-height: var(--height);
+}
+.bidding-interface .magic-height2 .frosted {
+  width: min(480px, 100%);
+  position: absolute;
+  bottom: 25%;
+}
+.bidding-interface .magic-height2 .frosted p + p {
+  margin-top: 1em;
+}
+.bidding-interface .magic-height2 .frosted.go-left {
+  left: var(--unit-huge);
+}
+.bidding-interface .magic-height2 .frosted.go-right {
+  right: var(--unit-huge);
+}
+@media (max-width: 880px) {
+  .bidding-interface .magic-height2 .frosted {
+    position: relative;
+    margin-inline: auto;
+    left: auto !important;
+    right: auto !important;
+  }
+}
+
+.bidding-interface .magic-height {
+  --height: 440px;
+  padding-block: var(--unit-bigger);
+  overflow: visible;
+  min-height: var(--height);
+}
+.bidding-interface .magic-height .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  min-height: var(--height);
+}
+.bidding-interface .magic-height .frosted {
+  width: min(480px, 100%);
+  position: absolute;
+  bottom: 25%;
+}
+.bidding-interface .magic-height .frosted p + p {
+  margin-top: 1em;
+}
+.bidding-interface .magic-height .frosted.go-left {
+  left: var(--unit-huge);
+}
+.bidding-interface .magic-height .frosted.go-right {
+  right: var(--unit-huge);
+}
+@media (max-width: 880px) {
+  .bidding-interface .magic-height .frosted {
+    position: relative;
+    margin-inline: auto;
+    left: auto !important;
+    right: auto !important;
+  }
+}
+.bidding-interface h2 {
+  font-size: clamp(56px, 7vmin, 120px);
+  line-height: 0.9;
+}
+@media (max-width: 880px) {
+  .bidding-interface h2 {
+    font-size: clamp(48px, 8vmin, 64px);
+  }
+}
+.bidding-interface #Bidding {
+  background: url("https://playerzero.xyz/presale/bg.png");
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+
+.bidding-interface #Bidding .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--unit-bigger);
+  width: min(880px, 100%);
+}
+@media (max-width: 880px) {
+  .bidding-interface #Bidding .container {
+    flex-direction: column;
+  }
+}
+.bidding-interface #Bidding .item {
+  width: 100%;
+}
+.bidding-interface #Bidding button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.bidding-interface .pass {
+  --gap: var(--unit-small);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+  margin-top: var(--gap);
+  flex: 1;
+}
+
+.bidding-interface #Current-Pass-Graphic {
+  --size: 680px;
+  width: var(--size);
+  aspect-ratio: 1;
+  flex: 0 1 var(--size);
+
+}
+.bidding-interface #Current-Pass-Graphic > * {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 880px) {
+  .bidding-interface #Current-Pass-Graphic {
+    max-height: 400px;
+  }
+}
+@media (max-width: 880px) {
+  #Current-Pass-Graphic {
+    height: 200px;
+    width:auto;
+  }
+}
+.bidding-interface #Pass-Nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.bidding-interface #Pass-Nav button {
+  width: 28px;
+  border: 2px solid var(--light-grey);
+  cursor: pointer;
+}
+.bidding-interface #Pass-Name {
+  color: var(--pink);
+}
+.bidding-interface #Auction-Status {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: var(--gap);
+}
+@media (max-width: 560px) {
+  .bidding-interface #Auction-Status {
+    flex-direction: column;
+  }
+  .bidding-interface #Auction-Status .item {
+    padding: 0;
+    border: none;
+    width: fit-content;
+  }
+}
+.bidding-interface #Auction-Status .item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  flex: 1 0 fit-content;
+}
+.bidding-interface #Auction-Timer {
+  padding-left: var(--unit-small);
+  border-left: 2px solid var(--light-grey);
+}
+.bidding-interface #Bid-Form {
+  --height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  border: 2px solid var(--light-grey);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+@media (max-width: 880px) {
+  .bidding-interface #Bid-Form {
+    flex-direction: column;
+  }
+}
+.bidding-interface #Bid-Form.disabled #Place-Bid {
+  background: var(--light-grey);
+  cursor: not-allowed;
+}
+.bidding-interface #Bid-Form.disabled #Bid-Amount {
+  color: var(--light-grey);
+  border-color: var(--pink);
+}
+.bidding-interface #Bid-Amount {
+  background: white;
+  color: black;
+  padding-inline: 16px;
+  width: 100%;
+  height: var(--height);
+}
+@media (max-width: 880px) {
+  .bidding-interface #Bid-Amount {
+    text-align: center;
+  }
+}
+.bidding-interface #Place-Bid {
+  padding-inline: var(--unit-small);
+  background: var(--pink);
+  cursor: pointer;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: var(--height);
+  text-align: center;
+  text-transform: uppercase;
+  transition: var(--dur);
+}
+.bidding-interface #Highest-Bidder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 12px;
+  font: 30px/1 var(--f-pir);
+}
+@media (max-width: 560px) {
+  .bidding-interface #Highest-Bidder {
+    flex-direction: column;
+  }
+}
+.bidding-interface .bid-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.bidding-interface #Highest-Bid {
+  margin-left: auto;
+}
+.bidding-interface #Bid-Link {
+  cursor: pointer;
+  transition: var(--dur);
+}
+.bidding-interface #Bid-Link:hover {
+  fill: var(--pink);
+}
+.bidding-interface #View-Bids {
+  width: 100%;
+}
+.bidding-interface #Short-Term-Roadmap {
+  padding: 0;
+}
+.bidding-interface #Short-Term-Roadmap {
+  background: url("https://playerzero.xyz/i/output-onlinepngtools.png") repeat center center/cover;
+}
+
+
+.bidding-interface #Pass-Overview {
+  padding: 0;
+}
+.bidding-interface #Pass-Overview .top::before {
+  background: white url("https://playerzero.xyz/i/PZ-overview-top-bg.webp") no-repeat center center/cover;
+  opacity: 0.5 !important;
+  filter: none !important;
+}
+.bidding-interface #Pass-Overview .middle::before {
+  background: white url("https://playerzero.xyz/i/PZ-overview-mid-bg.webp") no-repeat center center/cover;
+  opacity: 0.5 !important;
+  filter: none !important;
+}
+.bidding-interface #Pass-Overview .bottom::before {
+  background: white url("https://playerzero.xyz/i/PZ-overview-bottom-bg.webp") no-repeat center center/cover;
+  opacity: 0.5 !important;
+  filter: none !important;
+}
+
+
+
+.bidding-interface #Green-Room {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.bidding-interface #Green-Room .copy {
+  width: min(400px, 100%);
+}
+.bidding-interface #Green-Room::before {
+  background: white url("https://playerzero.xyz/i/PZ-green-room-bg.webp") no-repeat center center/cover;
+  opacity: 0.5 !important;
+  filter: none !important;
+}
+.bidding-interface #Utility-List {
+  padding: 0;
+  text-align: center;
+}
+.bidding-interface #Utility-List header {
+  padding: var(--unit-small);
+}
+.bidding-interface #Utility-List-Grid {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.bidding-interface #Utility-List-Grid .item {
+  flex: 1 0 calc(100% / 3);
+  padding: var(--unit-big) var(--unit-small);
+}
+@media (max-width: 880px) {
+  .bidding-interface #Utility-List-Grid .item {
+    flex-basis: 100%;
+  }
+}
+.bidding-interface #Utility-List-Grid .item:nth-of-type(even) {
+  background: #1a1a1a;
+}
+.bidding-interface #Utility-List-Grid .item h4 {
+  margin-bottom: 4px;
+}
+
+.bidding-interface #PZ-Universe::before {
+  background: white url("https://playerzero.xyz/i/PZ-universe-bg.webp") no-repeat center center/cover;
+  opacity: 0.35 !important;
+  filter: none !important;
+}
+.bidding-interface #PZ-Universe .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.bidding-interface #PZ-Universe .container .copy {
+  width: 50%;
+}
+@media (max-width: 560px) {
+  .bidding-interface #PZ-Universe .container .copy {
+    width: 100%;
+  }
+}
+.bidding-interface #PZ-Universe .container h4 {
+  margin-top: var(--unit-small);
+}
+.bidding-interface #FAQ-Mod {
+  margin-top: var(--unit-small);
+}
+.bidding-interface #FAQ-Mod .item {
+  padding-block: var(--unit-small);
+  cursor: pointer;
+}
+.bidding-interface #FAQ-Mod .item + .item {
+  border-top: 2px solid rgba(255, 255, 255, 0.25);
+}
+.bidding-interface #FAQ-Mod .item:not(.active) .answer {
+  display: none;
+}
+.bidding-interface #FAQ-Mod .question,
+.bidding-interface #FAQ-Mod .answer {
+  padding-left: 18px;
+}
+.bidding-interface #FAQ-Mod .question i {
+  margin-left: -18px;
+}
+.bidding-interface #FAQ-Mod .answer {
+  margin-top: 8px;
+}
+.bidding-interface h1,
+.bidding-interface h2,
+.bidding-interface h3,
+.bidding-interface h4,
+.bidding-interface .bid-label {
+  -webkit-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
+}
+.bidding-interface .bid-label {
+  text-transform: uppercase;
+  font: 20px/1 var(--f-pir);
+  color: var(--light-grey);
+}
+.bidding-interface h4 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 800;
+}
+.bidding-interface .circle {
+  border-radius: 100%;
+  aspect-ratio: 1;
+  text-align: center;
+}

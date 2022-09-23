@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>PLAYERZERØ: Amari</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://use.typekit.net/dtb3hly.css'>
+  <link rel="stylesheet" href="./style.css?54">
+
+<meta property="og:title" content="Music, Evolved" />
+<meta property="og:description" content="Our bands emerged from web3 to entertain you in your version of reality. Explore, adventure, love and listen to the voices of PLAYERZERØ." />
+<meta property="og:url" content="https://playerzero.xyz/" />
+<meta property="og:image" content="https://playerzero.xyz/i/PlayerZero_ShareBanner.png?2" />
+<meta property="og:site_name" content="PlayerZero: Amari" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+
+<meta name="twitter:card" content="photo" />
+<meta name="twitter:title" content="PlayerZero: Amari" />
+<meta name="twitter:description" content="Our bands emerged from web3 to entertain you in your version of reality. Explore, adventure, love and listen to the voices of PLAYERZERØ." />
+<meta name="twitter:image" content="https://playerzero.xyz/i/PlayerZero_ShareBanner.png" />
+<meta name="twitter:url" content="https://twitter.com/PlayerZeroHQ" />
+
+<link rel="apple-touch-icon" href="https://playerzero.xyz/i/PlayerZero_Favicon_256px.png" sizes="180x180">
+<link rel="icon" href="https://playerzero.xyz/i/PlayerZero_Favicon_256px.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://playerzero.xyz/i/PlayerZero_Favicon_256px.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://playerzero.xyz/i/PlayerZero_Favicon_256px.png">
+
+<link rel="stylesheet" href="./style.css">
+<!-- Google tag (gtag.js) -->
+<script async  src="https://www.googletagmanager.com/gtag/js?id=G-QCVN5SM6J4%22%3E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCVN5SM6J4');
+</script>
+
+<style>
+    	.image-logo {	
+  display: flex;	
+  justify-content: center;	
+}
+
+        
+        #Mobile-Nav {
+            position: absolute;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            inset: 0;
+            transition: all 0.25s linear;
+            transform: translateY(-100vh);
+        }
+        
+        #Mobile-Nav--List {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.25s linear;
+        }
+        
+        #Mobile-Nav--List a {
+            color: white;
+            font-size: 40px;
+            line-height: 1;
+            font-weight: 700;
+            z-index: 2;
+            transition: all 0.25s linear;
+        }
+        
+        #Mobile-Nav--List a:hover {
+            color: var(--clr-neon-blue);
+        }
+        
+        #Mobile-Nav.active {
+            transform: translateY(0);
+            height:100vh;
+        }
+        
+        #Mobile-Nav.active #Mobile-Nav--List {
+            opacity: 1;
+            pointer-events: initial;
+        }
+        
+        #Hamburger {
+            --bun-height: 8px;
+            --thickness: 2px;
+            align-items: center;
+            width: 24px;
+            aspect-ratio: 1;
+            position: relative;
+            background: none;
+            cursor: pointer;
+            display: none;
+        }
+        
+        @media (max-width: 640px) {
+            #Hamburger {
+                display: flex;
+            }
+        }
+        @media (min-width: 640px) {
+            #Mobile {
+                display: none;
+            }
+        }
+        
+        
+        #Hamburger .patty,
+        #Hamburger::before,
+        #Hamburger::after {
+            background: white;
+            height: var(--thickness);
+            width: 100%;
+            transition: all 0.25s linear;
+        }
+        
+        #Hamburger::before,
+        #Hamburger::after {
+            content: "";
+            position: absolute;
+        }
+        
+        #Hamburger::before {
+            transform: translateY(calc(var(--bun-height) * -1));
+        }
+        
+        #Hamburger::after {
+            transform: translateY(var(--bun-height));
+        }
+        
+        #Hamburger:hover {
+            --bun-height: 10px;
+        }
+        
+        #Hamburger.active {
+            --bun-height: 0;
+        }
+        
+        #Hamburger-Close{
+            --bun-height: 0;
+        }
+        
+        .no-scroll {
+            height: 100%;
+            overflow: hidden;
+               position: fixed; 
+
+        }
+        
+        @media (max-width: 640px) {
+          #Main-Nav > a {
+            display: none;
+          }
+          #Logo{
+              display: none;
+          }
+          #Main-Nav-Social > a {
+              display: none;
+          }
+        }
+        
+        .flex-container {
+    display: flex;
+        }
+        
+        .flex-child {
+            flex: 1;
+            border: 2px solid yellow;
+        }  
+        
+        .flex-child:first-child {
+            margin-right: 20px;
+        } 
+        
+                #Logo2 {
+                  width: min(280px, 100%);
+                  position: absolute;
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+
+        
+    </style>
+    <script>
+        function burger() {
+            document.getElementById("Hamburger").classList.add("active");
+            document.getElementById("Body").classList.add("no-scroll");
+            document.getElementById("Mobile-Nav").classList.add("active");
+            document.getElementById("Amari-Hero").style.display="none";
+        }
+        
+        function closeBurger() {
+            document.getElementById("Hamburger").classList.remove("active");
+            document.getElementById("Body").classList.remove("no-scroll");
+            document.getElementById("Mobile-Nav").classList.remove("active");
+            document.getElementById("Amari-Hero").style.display="inline";
+        }
+    </script>
+</head>
+
+<body id="Body">
+    <!-- partial:index.partial.html -->
+
+    <div id="Site-Frame" style="height:100vh">
+        <header id="Masthead">
+            <nav id="Main-Nav">
+                <a href="/">Home</a>
+                <a href="/team">Team</a>
+                <a href="/founderspass">Founders Pass</a>
+                <a href="/lore">Lore</a>
+                <a href="/amari" style="color:#ff2fff;">Amari</a>
+            </nav>
+            <nav id="Mobile-Nav" >
+                <div id="Mobile-Nav--List" style="margin-bottom:-40px">
+                    <button id="Hamburger-Close" onclick="closeBurger()" style="cursor:pointer"><p style="font-size:24px;">x</p></button>
+                    <br>
+                    <a href="/">Home</a>
+                    <a href="/team">Team</a>
+                    <a href="/founderspass">Founders Pass</a>
+                    <a href="/lore">Lore</a>
+                    <a href="/amari" style="color:#ff2fff;">Amari</a>
+                    <div class="social">
+                        <a href="https://discord.gg/playerzero" target="_blank" class="icon--discord">
+                            <svg height="24" viewBox="0 0 21.97 25.351">
+				<path d="M21.97,2.667A2.64,2.64,0,0,0,19.336.052L2.621,0A2.622,2.622,0,0,0,0,2.614V19.857a2.555,2.555,0,0,0,2.621,2.535H16.9l-.687-2.324L21.97,25.35Zm-7.359,13.9s-.461-.549-.845-1.021a4.056,4.056,0,0,0,2.316-1.5,7.341,7.341,0,0,1-1.471.753,9.159,9.159,0,0,1-1.854.549,8.981,8.981,0,0,1-3.313-.013,9.746,9.746,0,0,1-1.879-.55,7.411,7.411,0,0,1-.934-.433c-.038-.026-.076-.038-.115-.064s-.039-.025-.053-.025c-.231-.128-.358-.217-.358-.217a4,4,0,0,0,2.238,1.492c-.384.485-.857,1.046-.857,1.046a4.644,4.644,0,0,1-3.9-1.926A16.815,16.815,0,0,1,5.427,7.286,6.346,6.346,0,0,1,9.008,5.959l.128.153a8.4,8.4,0,0,0-3.35,1.658s.281-.153.754-.357a10.031,10.031,0,0,1,2.9-.8,1.272,1.272,0,0,1,.218-.026,10.864,10.864,0,0,1,2.583-.025,10.654,10.654,0,0,1,3.85,1.212A8.377,8.377,0,0,0,12.91,6.163l.179-.2A6.314,6.314,0,0,1,16.67,7.288a16.809,16.809,0,0,1,1.842,7.374,4.7,4.7,0,0,1-3.9,1.911" />
+				<path d="M17.1,22.9a1.407,1.407,0,1,0,1.3,1.4,1.349,1.349,0,0,0-1.3-1.4" transform="translate(-8.441 -12.235)" />
+				<path d="M27.126,22.9a1.407,1.407,0,1,0,1.3,1.4,1.349,1.349,0,0,0-1.3-1.4" transform="translate(-13.794 -12.235)" />
+			</svg>
+                        </a>
+                        <a href="https://twitter.com/PlayerZeroHQ" target="_blank" class="icon--twitter">
+                            <svg width="24" viewBox="0 0 25.757 20.933">
+				<path d="M25.757,2.478a10.515,10.515,0,0,1-3.035.832A5.3,5.3,0,0,0,25.046.386,10.578,10.578,0,0,1,21.69,1.669a5.289,5.289,0,0,0-9,4.82A15,15,0,0,1,1.793.967,5.29,5.29,0,0,0,3.428,8.023a5.259,5.259,0,0,1-2.393-.661c0,.022,0,.044,0,.067A5.288,5.288,0,0,0,5.274,12.61a5.291,5.291,0,0,1-1.392.186,5.236,5.236,0,0,1-.994-.1,5.29,5.29,0,0,0,4.936,3.67,10.6,10.6,0,0,1-6.563,2.262A10.789,10.789,0,0,1,0,18.559a14.957,14.957,0,0,0,8.1,2.374A14.933,14.933,0,0,0,23.136,5.9c0-.229,0-.457-.015-.684a10.724,10.724,0,0,0,2.636-2.736" />
+			</svg>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=IZ2hNhvUCHc" target="_blank" class="icon--youtube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27.446" height="26.867" viewBox="0 0 27.446 26.867">
+  <path id="YouTube_Icon" data-name="YouTube Icon" d="M-1662.38,138.792a4.832,4.832,0,0,1-4.831-4.832v-3.883a4.832,4.832,0,0,1,4.831-4.832h16.784a4.832,4.832,0,0,1,4.83,4.832v3.883a4.832,4.832,0,0,1-4.83,4.832Zm14.059-9.083a1.887,1.887,0,0,0-.569,1.419v3.007a2.133,2.133,0,0,0,.517,1.517,1.841,1.841,0,0,0,1.416.552,2,2,0,0,0,1.5-.517,2.143,2.143,0,0,0,.505-1.552v-.343h-1.376v.3a1.44,1.44,0,0,1-.133.764.556.556,0,0,1-.466.173.5.5,0,0,1-.454-.2,1.454,1.454,0,0,1-.131-.733v-1.261h2.559v-1.707a2.01,2.01,0,0,0-.493-1.459,1.88,1.88,0,0,0-1.412-.508A2.019,2.019,0,0,0-1648.321,129.71Zm-9.945,5.215a1.436,1.436,0,0,0,.235.9.829.829,0,0,0,.7.3,1.612,1.612,0,0,0,.778-.214,2.868,2.868,0,0,0,.772-.618v.733h1.337v-6.694h-1.337v5.085a1.831,1.831,0,0,1-.415.36.767.767,0,0,1-.373.14.326.326,0,0,1-.275-.107.568.568,0,0,1-.083-.342v-5.135h-1.337Zm6.751,1.038a1.6,1.6,0,0,0,.7.146,1.113,1.113,0,0,0,.909-.378,1.673,1.673,0,0,0,.315-1.09v-3.715a2,2,0,0,0-.335-1.252,1.155,1.155,0,0,0-.97-.426,1.316,1.316,0,0,0-.618.159,2.115,2.115,0,0,0-.573.465V126.95h-1.353v9.072h1.353v-.513A1.712,1.712,0,0,0-1651.516,135.963Zm-11.966-7.694h1.56v7.753h1.507v-7.753h1.56V126.95h-4.628Zm11.711,6.72a1.16,1.16,0,0,1-.317-.238v-4.17a1,1,0,0,1,.276-.2.655.655,0,0,1,.284-.064.516.516,0,0,1,.417.173.8.8,0,0,1,.14.515v3.457a.734.734,0,0,1-.116.461.435.435,0,0,1-.361.143A.793.793,0,0,1-1651.77,134.988Zm4.259-3.193v-.677a.983.983,0,0,1,.138-.6.533.533,0,0,1,.459-.185.515.515,0,0,1,.444.185.985.985,0,0,1,.142.6v.677Zm-8.287-9.245a1.955,1.955,0,0,1-.593-1.5v-3.822a1.685,1.685,0,0,1,.608-1.365,2.474,2.474,0,0,1,1.635-.507,2.219,2.219,0,0,1,1.534.534,1.773,1.773,0,0,1,.6,1.38v3.809a1.921,1.921,0,0,1-.584,1.484,2.3,2.3,0,0,1-1.613.538A2.223,2.223,0,0,1-1655.8,122.55Zm1.128-5.764a.5.5,0,0,0-.171.391v4.017a.647.647,0,0,0,.161.469.6.6,0,0,0,.459.167.679.679,0,0,0,.486-.169.608.608,0,0,0,.181-.467v-4.017a.483.483,0,0,0-.184-.391.744.744,0,0,0-.484-.148A.667.667,0,0,0-1654.67,116.786Zm4.137,5.909a1.55,1.55,0,0,1-.264-.986v-6.162h1.5V121.2a.6.6,0,0,0,.1.377.365.365,0,0,0,.307.119.877.877,0,0,0,.421-.155,2.066,2.066,0,0,0,.463-.4v-5.6h1.507v7.373h-1.507V122.1a3.193,3.193,0,0,1-.867.688,1.9,1.9,0,0,1-.873.235A.949.949,0,0,1-1650.533,122.7Zm-9.649.225v-3.96l-2.02-6.036h1.708l1.1,4h.106l1.049-4h1.723l-1.973,5.849v4.147Z" transform="translate(1667.711 -112.425)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+</svg>
+                        </a>
+                        <a href="" class="icon--opensea">
+                            <svg width="26" viewBox="0 0 28 28">
+				<path d="M14,0A14,14,0,1,0,28,14,14,14,0,0,0,14,0ZM6.908,14.47l.059-.1,3.643-5.7a.125.125,0,0,1,.218.017,7.766,7.766,0,0,1,.888,4.116A6.332,6.332,0,0,1,11,14.375c-.042.078-.087.157-.137.232a.124.124,0,0,1-.1.053H7.014A.124.124,0,0,1,6.908,14.47Zm16.232,1.96a.127.127,0,0,1-.076.118,4.482,4.482,0,0,0-1.649,1.123c-1.025,1.425-1.806,3.464-3.556,3.464h-7.3a4.689,4.689,0,0,1-4.682-4.7v-.084a.125.125,0,0,1,.126-.123h4.066a.139.139,0,0,1,.134.154,1.368,1.368,0,0,0,.146.781,1.429,1.429,0,0,0,1.282.8h2.013V16.388H11.656a.129.129,0,0,1-.1-.2c.022-.034.045-.067.073-.106.188-.269.456-.683.725-1.156a9.3,9.3,0,0,0,.5-1c.028-.062.05-.126.076-.188.039-.109.078-.213.106-.314s.053-.176.076-.26a4.087,4.087,0,0,0,.1-.918c0-.126-.006-.258-.017-.381s-.022-.274-.039-.412c-.011-.12-.034-.241-.056-.364-.031-.182-.07-.364-.115-.546l-.017-.07c-.034-.126-.064-.244-.1-.37-.115-.392-.244-.776-.384-1.134-.05-.143-.106-.28-.165-.414-.084-.207-.171-.395-.249-.571-.042-.081-.076-.154-.109-.23s-.078-.168-.12-.249c-.028-.062-.062-.12-.084-.176L11.5,6.871a.081.081,0,0,1,.09-.118l1.54.417h.011l.2.059.224.062.081.022V6.4a.8.8,0,0,1,.792-.8A.771.771,0,0,1,15,5.835a.8.8,0,0,1,.232.566V7.759l.165.045a.232.232,0,0,1,.036.02c.039.028.1.073.171.129s.12.1.193.16c.148.12.328.274.521.451.05.045.1.09.148.137.249.232.529.5.8.806.076.087.148.171.224.263s.154.182.221.272c.092.12.188.246.274.378.039.062.087.126.123.188a5.862,5.862,0,0,1,.3.507c.039.078.078.165.112.249a3.466,3.466,0,0,1,.235.7.759.759,0,0,1,.034.154v.011a1.294,1.294,0,0,1,.028.216,2.4,2.4,0,0,1-.039.72c-.022.1-.05.2-.084.3s-.07.2-.115.3a4.028,4.028,0,0,1-.308.585c-.039.07-.087.143-.132.213s-.1.143-.148.21c-.064.087-.132.176-.2.258a2.732,2.732,0,0,1-.193.244c-.1.115-.188.221-.286.325a2.429,2.429,0,0,1-.182.2c-.062.07-.126.132-.182.188-.1.1-.176.171-.244.235l-.16.143a.119.119,0,0,1-.084.034H15.229v1.571h1.543a1.435,1.435,0,0,0,.938-.347,11.39,11.39,0,0,0,.952-.935.11.11,0,0,1,.059-.036l4.259-1.232a.125.125,0,0,1,.16.12v.9Z" />
+			</svg>
+                        </a>
+                        <!--<a href="" target="_blank" class="icon--looksrare">-->
+                        <!--	<svg height="24" viewBox="0 0 29.312 23.371">-->
+                        <!--		<path d="M14.656,4.159a4.555,4.555,0,1,0,4.555,4.555,4.555,4.555,0,0,0-4.555-4.555m0,6.536a1.981,1.981,0,1,1,1.981-1.981A1.981,1.981,0,0,1,14.656,10.7M20.6,0H8.715L0,8.72l14.656,14.65L29.312,8.72ZM7.922,11.883,4.753,8.715,7.922,5.546a9.523,9.523,0,0,1,13.468,0l3.169,3.169L21.39,11.883a9.523,9.523,0,0,1-13.468,0" />-->
+                        <!--	</svg>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+            </nav>
+            <!-- #Main-Content -->
+
+                <a id="Logo" href="https://playerzero.xyz/"  class="image-logo">
+                <img id="Logo-Update" src="/i/logo2.svg" width="150" height="46.243" viewbox="0 0 228 46.243">
+            </a>
+
+        
+        <div class="flex-container" id="Mobile">
+            <a id="Logo-Mobile" href="https://playerzero.xyz/"  style="margin-right:60px;">
+                <img id="Logo-Update" src="/i/logo2.svg" width="150" height="46.243" viewbox="0 0 228 46.243">
+            </a>
+        
+            <button id="Hamburger" onclick="burger()" style="margin-left:60px" class=""> <span class="patty"></span></button>
+          
+        </div>
+
+            <div class="social" id="Main-Nav-Social">
+                <a href="https://discord.gg/playerzero" target="_blank" class="icon--discord">
+                    <svg height="24" viewBox="0 0 21.97 25.351">
+				<path d="M21.97,2.667A2.64,2.64,0,0,0,19.336.052L2.621,0A2.622,2.622,0,0,0,0,2.614V19.857a2.555,2.555,0,0,0,2.621,2.535H16.9l-.687-2.324L21.97,25.35Zm-7.359,13.9s-.461-.549-.845-1.021a4.056,4.056,0,0,0,2.316-1.5,7.341,7.341,0,0,1-1.471.753,9.159,9.159,0,0,1-1.854.549,8.981,8.981,0,0,1-3.313-.013,9.746,9.746,0,0,1-1.879-.55,7.411,7.411,0,0,1-.934-.433c-.038-.026-.076-.038-.115-.064s-.039-.025-.053-.025c-.231-.128-.358-.217-.358-.217a4,4,0,0,0,2.238,1.492c-.384.485-.857,1.046-.857,1.046a4.644,4.644,0,0,1-3.9-1.926A16.815,16.815,0,0,1,5.427,7.286,6.346,6.346,0,0,1,9.008,5.959l.128.153a8.4,8.4,0,0,0-3.35,1.658s.281-.153.754-.357a10.031,10.031,0,0,1,2.9-.8,1.272,1.272,0,0,1,.218-.026,10.864,10.864,0,0,1,2.583-.025,10.654,10.654,0,0,1,3.85,1.212A8.377,8.377,0,0,0,12.91,6.163l.179-.2A6.314,6.314,0,0,1,16.67,7.288a16.809,16.809,0,0,1,1.842,7.374,4.7,4.7,0,0,1-3.9,1.911" />
+				<path d="M17.1,22.9a1.407,1.407,0,1,0,1.3,1.4,1.349,1.349,0,0,0-1.3-1.4" transform="translate(-8.441 -12.235)" />
+				<path d="M27.126,22.9a1.407,1.407,0,1,0,1.3,1.4,1.349,1.349,0,0,0-1.3-1.4" transform="translate(-13.794 -12.235)" />
+			</svg>
+                </a>
+                <a href="https://twitter.com/PlayerZeroHQ" target="_blank" class="icon--twitter">
+                    <svg width="24" viewBox="0 0 25.757 20.933">
+				<path d="M25.757,2.478a10.515,10.515,0,0,1-3.035.832A5.3,5.3,0,0,0,25.046.386,10.578,10.578,0,0,1,21.69,1.669a5.289,5.289,0,0,0-9,4.82A15,15,0,0,1,1.793.967,5.29,5.29,0,0,0,3.428,8.023a5.259,5.259,0,0,1-2.393-.661c0,.022,0,.044,0,.067A5.288,5.288,0,0,0,5.274,12.61a5.291,5.291,0,0,1-1.392.186,5.236,5.236,0,0,1-.994-.1,5.29,5.29,0,0,0,4.936,3.67,10.6,10.6,0,0,1-6.563,2.262A10.789,10.789,0,0,1,0,18.559a14.957,14.957,0,0,0,8.1,2.374A14.933,14.933,0,0,0,23.136,5.9c0-.229,0-.457-.015-.684a10.724,10.724,0,0,0,2.636-2.736" />
+			</svg>
+                </a>
+                <a href="https://www.youtube.com/watch?v=IZ2hNhvUCHc" target="_blank" class="icon--youtube">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27.446" height="26.867" viewBox="0 0 27.446 26.867">
+  <path id="YouTube_Icon" data-name="YouTube Icon" d="M-1662.38,138.792a4.832,4.832,0,0,1-4.831-4.832v-3.883a4.832,4.832,0,0,1,4.831-4.832h16.784a4.832,4.832,0,0,1,4.83,4.832v3.883a4.832,4.832,0,0,1-4.83,4.832Zm14.059-9.083a1.887,1.887,0,0,0-.569,1.419v3.007a2.133,2.133,0,0,0,.517,1.517,1.841,1.841,0,0,0,1.416.552,2,2,0,0,0,1.5-.517,2.143,2.143,0,0,0,.505-1.552v-.343h-1.376v.3a1.44,1.44,0,0,1-.133.764.556.556,0,0,1-.466.173.5.5,0,0,1-.454-.2,1.454,1.454,0,0,1-.131-.733v-1.261h2.559v-1.707a2.01,2.01,0,0,0-.493-1.459,1.88,1.88,0,0,0-1.412-.508A2.019,2.019,0,0,0-1648.321,129.71Zm-9.945,5.215a1.436,1.436,0,0,0,.235.9.829.829,0,0,0,.7.3,1.612,1.612,0,0,0,.778-.214,2.868,2.868,0,0,0,.772-.618v.733h1.337v-6.694h-1.337v5.085a1.831,1.831,0,0,1-.415.36.767.767,0,0,1-.373.14.326.326,0,0,1-.275-.107.568.568,0,0,1-.083-.342v-5.135h-1.337Zm6.751,1.038a1.6,1.6,0,0,0,.7.146,1.113,1.113,0,0,0,.909-.378,1.673,1.673,0,0,0,.315-1.09v-3.715a2,2,0,0,0-.335-1.252,1.155,1.155,0,0,0-.97-.426,1.316,1.316,0,0,0-.618.159,2.115,2.115,0,0,0-.573.465V126.95h-1.353v9.072h1.353v-.513A1.712,1.712,0,0,0-1651.516,135.963Zm-11.966-7.694h1.56v7.753h1.507v-7.753h1.56V126.95h-4.628Zm11.711,6.72a1.16,1.16,0,0,1-.317-.238v-4.17a1,1,0,0,1,.276-.2.655.655,0,0,1,.284-.064.516.516,0,0,1,.417.173.8.8,0,0,1,.14.515v3.457a.734.734,0,0,1-.116.461.435.435,0,0,1-.361.143A.793.793,0,0,1-1651.77,134.988Zm4.259-3.193v-.677a.983.983,0,0,1,.138-.6.533.533,0,0,1,.459-.185.515.515,0,0,1,.444.185.985.985,0,0,1,.142.6v.677Zm-8.287-9.245a1.955,1.955,0,0,1-.593-1.5v-3.822a1.685,1.685,0,0,1,.608-1.365,2.474,2.474,0,0,1,1.635-.507,2.219,2.219,0,0,1,1.534.534,1.773,1.773,0,0,1,.6,1.38v3.809a1.921,1.921,0,0,1-.584,1.484,2.3,2.3,0,0,1-1.613.538A2.223,2.223,0,0,1-1655.8,122.55Zm1.128-5.764a.5.5,0,0,0-.171.391v4.017a.647.647,0,0,0,.161.469.6.6,0,0,0,.459.167.679.679,0,0,0,.486-.169.608.608,0,0,0,.181-.467v-4.017a.483.483,0,0,0-.184-.391.744.744,0,0,0-.484-.148A.667.667,0,0,0-1654.67,116.786Zm4.137,5.909a1.55,1.55,0,0,1-.264-.986v-6.162h1.5V121.2a.6.6,0,0,0,.1.377.365.365,0,0,0,.307.119.877.877,0,0,0,.421-.155,2.066,2.066,0,0,0,.463-.4v-5.6h1.507v7.373h-1.507V122.1a3.193,3.193,0,0,1-.867.688,1.9,1.9,0,0,1-.873.235A.949.949,0,0,1-1650.533,122.7Zm-9.649.225v-3.96l-2.02-6.036h1.708l1.1,4h.106l1.049-4h1.723l-1.973,5.849v4.147Z" transform="translate(1667.711 -112.425)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+</svg>
+                </a>
+                <a href="https://opensea.io/collection/playerzerofp" target="_blank" class="icon--opensea">
+                    <svg width="26" viewBox="0 0 28 28">
+				<path d="M14,0A14,14,0,1,0,28,14,14,14,0,0,0,14,0ZM6.908,14.47l.059-.1,3.643-5.7a.125.125,0,0,1,.218.017,7.766,7.766,0,0,1,.888,4.116A6.332,6.332,0,0,1,11,14.375c-.042.078-.087.157-.137.232a.124.124,0,0,1-.1.053H7.014A.124.124,0,0,1,6.908,14.47Zm16.232,1.96a.127.127,0,0,1-.076.118,4.482,4.482,0,0,0-1.649,1.123c-1.025,1.425-1.806,3.464-3.556,3.464h-7.3a4.689,4.689,0,0,1-4.682-4.7v-.084a.125.125,0,0,1,.126-.123h4.066a.139.139,0,0,1,.134.154,1.368,1.368,0,0,0,.146.781,1.429,1.429,0,0,0,1.282.8h2.013V16.388H11.656a.129.129,0,0,1-.1-.2c.022-.034.045-.067.073-.106.188-.269.456-.683.725-1.156a9.3,9.3,0,0,0,.5-1c.028-.062.05-.126.076-.188.039-.109.078-.213.106-.314s.053-.176.076-.26a4.087,4.087,0,0,0,.1-.918c0-.126-.006-.258-.017-.381s-.022-.274-.039-.412c-.011-.12-.034-.241-.056-.364-.031-.182-.07-.364-.115-.546l-.017-.07c-.034-.126-.064-.244-.1-.37-.115-.392-.244-.776-.384-1.134-.05-.143-.106-.28-.165-.414-.084-.207-.171-.395-.249-.571-.042-.081-.076-.154-.109-.23s-.078-.168-.12-.249c-.028-.062-.062-.12-.084-.176L11.5,6.871a.081.081,0,0,1,.09-.118l1.54.417h.011l.2.059.224.062.081.022V6.4a.8.8,0,0,1,.792-.8A.771.771,0,0,1,15,5.835a.8.8,0,0,1,.232.566V7.759l.165.045a.232.232,0,0,1,.036.02c.039.028.1.073.171.129s.12.1.193.16c.148.12.328.274.521.451.05.045.1.09.148.137.249.232.529.5.8.806.076.087.148.171.224.263s.154.182.221.272c.092.12.188.246.274.378.039.062.087.126.123.188a5.862,5.862,0,0,1,.3.507c.039.078.078.165.112.249a3.466,3.466,0,0,1,.235.7.759.759,0,0,1,.034.154v.011a1.294,1.294,0,0,1,.028.216,2.4,2.4,0,0,1-.039.72c-.022.1-.05.2-.084.3s-.07.2-.115.3a4.028,4.028,0,0,1-.308.585c-.039.07-.087.143-.132.213s-.1.143-.148.21c-.064.087-.132.176-.2.258a2.732,2.732,0,0,1-.193.244c-.1.115-.188.221-.286.325a2.429,2.429,0,0,1-.182.2c-.062.07-.126.132-.182.188-.1.1-.176.171-.244.235l-.16.143a.119.119,0,0,1-.084.034H15.229v1.571h1.543a1.435,1.435,0,0,0,.938-.347,11.39,11.39,0,0,0,.952-.935.11.11,0,0,1,.059-.036l4.259-1.232a.125.125,0,0,1,.16.12v.9Z" />
+			</svg>
+                </a>
+                <!--<a href="" target="_blank" class="icon--looksrare">-->
+                <!--	<svg height="24" viewBox="0 0 29.312 23.371">-->
+                <!--		<path d="M14.656,4.159a4.555,4.555,0,1,0,4.555,4.555,4.555,4.555,0,0,0-4.555-4.555m0,6.536a1.981,1.981,0,1,1,1.981-1.981A1.981,1.981,0,0,1,14.656,10.7M20.6,0H8.715L0,8.72l14.656,14.65L29.312,8.72ZM7.922,11.883,4.753,8.715,7.922,5.546a9.523,9.523,0,0,1,13.468,0l3.169,3.169L21.39,11.883a9.523,9.523,0,0,1-13.468,0" />-->
+                <!--	</svg>-->
+                <!--</a>-->
+            </div>
+        </header>
+        
+        	
+	<section id="Countdown">
+		<a id="Auction" class="frosted button" href="https://playerzero.xyz/amari/mint" style="background-color:black">Mint Now</a>
+		
+		<!--<a id="Auction" class="frosted button" href="/mint">Mint Now (For CyberBroker Holders)</a>-->
+			
+	</section>
+        
+<main id="Site" class="amari">
+	<!-- amari hero -->
+	<section id="Amari-Hero" class="img-bg">
+		<div class="container">
+			<div class="content">
+				<h2>Amari</h2>
+				<div id="Tunes" style="background-color:transparent">
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1dsX7Ig9lw6tzEPKXv9Xqk?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+			</div>
+			</div>
+	</section>
+	
+	<!-- amari info -->
+	<section id="Amari-Info">
+		<div class="container">
+			<div class="amari-lockup">
+				<h2>Amari</h2>
+				<div class="amari-social social">
+					<a href="https://discord.gg/playerzero" class="icon--discord" target="_blank">
+						<svg height="24" viewBox="0 0 21.97 25.351">
+							<path d="M21.97,2.667A2.64,2.64,0,0,0,19.336.052L2.621,0A2.622,2.622,0,0,0,0,2.614V19.857a2.555,2.555,0,0,0,2.621,2.535H16.9l-.687-2.324L21.97,25.35Zm-7.359,13.9s-.461-.549-.845-1.021a4.056,4.056,0,0,0,2.316-1.5,7.341,7.341,0,0,1-1.471.753,9.159,9.159,0,0,1-1.854.549,8.981,8.981,0,0,1-3.313-.013,9.746,9.746,0,0,1-1.879-.55,7.411,7.411,0,0,1-.934-.433c-.038-.026-.076-.038-.115-.064s-.039-.025-.053-.025c-.231-.128-.358-.217-.358-.217a4,4,0,0,0,2.238,1.492c-.384.485-.857,1.046-.857,1.046a4.644,4.644,0,0,1-3.9-1.926A16.815,16.815,0,0,1,5.427,7.286,6.346,6.346,0,0,1,9.008,5.959l.128.153a8.4,8.4,0,0,0-3.35,1.658s.281-.153.754-.357a10.031,10.031,0,0,1,2.9-.8,1.272,1.272,0,0,1,.218-.026,10.864,10.864,0,0,1,2.583-.025,10.654,10.654,0,0,1,3.85,1.212A8.377,8.377,0,0,0,12.91,6.163l.179-.2A6.314,6.314,0,0,1,16.67,7.288a16.809,16.809,0,0,1,1.842,7.374,4.7,4.7,0,0,1-3.9,1.911" />
+							<path d="M17.1,22.9a1.407,1.407,0,1,0,1.3,1.4,1.349,1.349,0,0,0-1.3-1.4" transform="translate(-8.441 -12.235)" />
+							<path d="M27.126,22.9a1.407,1.407,0,1,0,1.3,1.4,1.349,1.349,0,0,0-1.3-1.4" transform="translate(-13.794 -12.235)" />
+						</svg>
+					</a>
+					<a href="https://twitter.com/Amariv3rse/" class="icon--twitter" target="_blank">
+						<svg width="24" viewBox="0 0 25.757 20.933">
+							<path d="M25.757,2.478a10.515,10.515,0,0,1-3.035.832A5.3,5.3,0,0,0,25.046.386,10.578,10.578,0,0,1,21.69,1.669a5.289,5.289,0,0,0-9,4.82A15,15,0,0,1,1.793.967,5.29,5.29,0,0,0,3.428,8.023a5.259,5.259,0,0,1-2.393-.661c0,.022,0,.044,0,.067A5.288,5.288,0,0,0,5.274,12.61a5.291,5.291,0,0,1-1.392.186,5.236,5.236,0,0,1-.994-.1,5.29,5.29,0,0,0,4.936,3.67,10.6,10.6,0,0,1-6.563,2.262A10.789,10.789,0,0,1,0,18.559a14.957,14.957,0,0,0,8.1,2.374A14.933,14.933,0,0,0,23.136,5.9c0-.229,0-.457-.015-.684a10.724,10.724,0,0,0,2.636-2.736" />
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/amariv3rse/" class="instagram--icon" target="_blank">
+						<svg height="24" viewBox="0 0 24.191 24.191">
+							<path d="M18.267,11.9a6.224,6.224,0,1,0,6.224,6.224A6.231,6.231,0,0,0,18.267,11.9m0,10.22a4,4,0,1,1,4-4,4,4,0,0,1-4,4" transform="translate(-6.171 -6.099)" />
+							<path d="M36.566,8.693a1.413,1.413,0,1,0,1.413,1.413,1.413,1.413,0,0,0-1.413-1.413" transform="translate(-18.013 -4.455)" />
+							<path d="M22.241,1.98A7.022,7.022,0,0,0,17.119,0H7.073A6.7,6.7,0,0,0,0,7.073v9.99a7.052,7.052,0,0,0,2.037,5.209,7.127,7.127,0,0,0,5.092,1.919h9.935A7.161,7.161,0,0,0,22.2,22.277a7,7,0,0,0,1.994-5.158V7.073a7.041,7.041,0,0,0-1.95-5.093m-.276,15.139a4.837,4.837,0,0,1-1.322,3.565,4.989,4.989,0,0,1-3.579,1.281H7.129a4.953,4.953,0,0,1-3.541-1.29,4.882,4.882,0,0,1-1.361-3.611V7.073a4.872,4.872,0,0,1,1.3-3.555A4.883,4.883,0,0,1,7.073,2.226H17.119A4.85,4.85,0,0,1,20.66,3.548a4.867,4.867,0,0,1,1.3,3.524Z" />
+						</svg>
+					</a>
+					<a href="mailto:info@digitalscience.art" class="email--icon">
+						<svg width="24" viewBox="0 0 22.719 18.176">
+							<path d="M23.447,6H5.272A2.269,2.269,0,0,0,3.011,8.272L3,21.9a2.279,2.279,0,0,0,2.272,2.272H23.447A2.279,2.279,0,0,0,25.719,21.9V8.272A2.279,2.279,0,0,0,23.447,6Zm0,4.544-9.088,5.68-9.088-5.68V8.272l9.088,5.68,9.088-5.68Z" transform="translate(-3 -6)" />
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="amari-info">
+				<p>Amari is working as a liaison / hired help for the famed Collective. She is passionate and determined. When she’s made up her mind on something, there is no deterring her from the mission. She also has a soft spot for life, and values it greatly, considering where she came from - and what she is: a sentient AI now in corporeal form for the first time.
+				</p>
+				<div class="amari-contacts">
+					<div class="amari-inquiry contact">
+						<span class="contact-title">Bookings & General inquiries:</span>
+						<a href="mailto:info@digitalscience.art">info@digitalscience.art</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- latest + newsletter -->
+	<section id="Latest">
+		<div class="container">
+		<div id="Latest-Track">
+			<div class="track-cover"><img src="unnamed.jpg"></div>
+			<div class="track-info">
+				<br><br>
+				<h3 class="track-title">Deeper</h3>
+				<div class="track-links">
+				    					<a href="http://open.spotify.com/artist/7oUBfJfNM6Fh0pO5EdbM6P" target="_blank" class="spotify-logo track-link">
+						<svg viewBox="0 0 49.317 49.323">
+							<path d="M25.665,49.323h-2a1.6,1.6,0,0,0-.168-.03c-.786-.06-1.572-.122-2.354-.235A24.7,24.7,0,0,1,1.245,32.36,25.35,25.35,0,0,1,.006,25.1c-.024-.74.031-1.476.075-2.212a21.957,21.957,0,0,1,.287-2.426,23.852,23.852,0,0,1,1.71-5.695A24.485,24.485,0,0,1,13.2,2.829,23.944,23.944,0,0,1,23.843.014,24.47,24.47,0,0,1,31.8,1.04a24.735,24.735,0,0,1,15.99,15.007,24.149,24.149,0,0,1,1.288,5.039,16.7,16.7,0,0,1,.208,2.3,2.758,2.758,0,0,0,.033.283v1.964a1.114,1.114,0,0,0-.028.149c-.008.225,0,.45-.02.674-.063.831-.161,1.659-.306,2.481A24.7,24.7,0,0,1,31.288,48.412a21.858,21.858,0,0,1-3.1.644c-.6.076-1.2.129-1.8.192ZM21.4,13.032c-1.767.027-3.185.054-4.6.188-.575.055-1.151.1-1.722.175q-1.2.163-2.393.374a28.291,28.291,0,0,0-3.4.814,2.3,2.3,0,0,0-.459,4.224,2.294,2.294,0,0,0,1.807.179,32.548,32.548,0,0,1,5.384-1.067q1.636-.191,3.281-.25c1.29-.046,2.58-.044,3.869.019,1.007.049,2.011.125,3.012.235q1.587.174,3.157.461a37.611,37.611,0,0,1,4.587,1.126A25.488,25.488,0,0,1,38.7,21.524c.252.141.5.286.758.419a2.062,2.062,0,0,0,1.46.171,2.293,2.293,0,0,0,.914-4.071,5.629,5.629,0,0,0-.733-.458,31.81,31.81,0,0,0-6.819-2.779,40.858,40.858,0,0,0-5.348-1.16c-.85-.124-1.7-.241-2.555-.332-.727-.079-1.457-.131-2.187-.17C23.144,13.09,22.1,13.059,21.4,13.032Zm-.557,8.476c-1.377.022-2.423.043-3.465.149-.632.064-1.264.121-1.893.207a30.86,30.86,0,0,0-3.395.656c-.49.124-.982.25-1.459.415a1.913,1.913,0,0,0,.885,3.71c.3-.056.593-.161.889-.24a30.524,30.524,0,0,1,4.626-.855c.907-.1,1.816-.154,2.727-.177.944-.023,1.887,0,2.829.06q1.557.093,3.1.325a32.407,32.407,0,0,1,4.331.958A27.033,27.033,0,0,1,36.2,29.37c.121.072.246.14.372.2a1.745,1.745,0,0,0,1.347.1,1.928,1.928,0,0,0,.654-3.327,4.232,4.232,0,0,0-.5-.332,29.113,29.113,0,0,0-5.421-2.5,36.266,36.266,0,0,0-9.2-1.882C22.476,21.56,21.494,21.538,20.843,21.508Zm-.321,8.029c-.929.056-1.891.1-2.85.174q-1.122.09-2.237.247c-.811.115-1.619.263-2.425.41-.5.09-.994.191-1.486.31a1.539,1.539,0,0,0-.1,2.975,1.865,1.865,0,0,0,1.024-.023,35.81,35.81,0,0,1,4.887-.82c.836-.087,1.676-.126,2.516-.168a26.846,26.846,0,0,1,4.648.205,24.778,24.778,0,0,1,2.7.491,22.4,22.4,0,0,1,6.481,2.609,3.941,3.941,0,0,0,.391.206,1.446,1.446,0,0,0,1.015.07,1.539,1.539,0,0,0,1.048-1.928,1.684,1.684,0,0,0-.783-.939,24.979,24.979,0,0,0-2.777-1.449,27.685,27.685,0,0,0-9.369-2.263C22.327,29.582,21.441,29.572,20.522,29.537Z" fill="#fff" />
+
+						</svg>
+
+					</a>
+					<a href="https://music.apple.com/us/album/deeper/1639951364?i=1639951365" target="_blank" class="apple-logo track-link"><svg viewBox="0 0 49.25 49.25">
+							<path d="M24.625,0A24.625,24.625,0,1,0,49.25,24.625,24.625,24.625,0,0,0,24.625,0Zm1.412,9.986A6.933,6.933,0,0,1,30.6,7.641a6.828,6.828,0,0,1-1.614,4.947,5.749,5.749,0,0,1-4.6,2.193A6.5,6.5,0,0,1,26.037,9.986Zm8.867,24.8c-1.293,1.889-2.632,3.772-4.744,3.809-2.076.039-2.743-1.231-5.115-1.231s-3.115,1.194-5.08,1.27c-2.037.076-3.589-2.037-4.892-3.92-2.665-3.848-4.7-10.875-1.964-15.619a7.583,7.583,0,0,1,6.412-3.887c2-.037,3.892,1.35,5.114,1.35s3.521-1.666,5.935-1.42a7.235,7.235,0,0,1,5.668,3.07,7.014,7.014,0,0,0-3.347,5.9,6.852,6.852,0,0,0,4.16,6.27A17.163,17.163,0,0,1,34.9,34.785Z" fill="white" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- newsletter -->
+		<div id="Newsletter">
+			<div class="signup-lockup">
+				<h3>Don't Miss Out</h3>
+				<span class="h3-sub">Sign up for our newsletter</span>
+			</div>
+			<div class="form">
+				<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
+				<style type="text/css">
+					#mc_embed_signup {
+						background: transparent;
+						clear: left;
+						font: 14px;
+						Helvetica,
+						Arial,
+						sans-serif;
+						width: 270px;
+					}
+				</style>
+				<div id="mc_embed_signup">
+					<form action="https://art.us12.list-manage.com/subscribe/post?u=78e9fffd659d6f0e3627f1695&amp;id=c25c2ae0fd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
+						<div id="mc_embed_signup_scroll">
+							<div class="mc-field-group">
+								<input type="email" style="height:50px;" value="" name="EMAIL" class="required email" id="mce-EMAIL" aria-required="true">
+							</div>
+							<div id="mce-responses" class="clear foot">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+							</div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_78e9fffd659d6f0e3627f1695_c25c2ae0fd" tabindex="-1" value=""></div>
+							<div class="optionalParent">
+								<div class="clear foot">
+									<input type="submit" style="color:black;   height:50px; width:250px;" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+				<script type="text/javascript">
+					(function($) {
+						window.fnames = new Array();
+						window.ftypes = new Array();
+						fnames[0] = 'EMAIL';
+						ftypes[0] = 'email';
+						fnames[1] = 'FNAME';
+						ftypes[1] = 'text';
+						fnames[2] = 'LNAME';
+						ftypes[2] = 'text';
+						fnames[3] = 'ADDRESS';
+						ftypes[3] = 'address';
+						fnames[4] = 'PHONE';
+						ftypes[4] = 'phone';
+						fnames[5] = 'BIRTHDAY';
+						ftypes[5] = 'birthday';
+					}(jQuery));
+					var $mcj = jQuery.noConflict(true);
+				</script>
+			</div>
+		</div>
+			</div>
+	</section>
+	<section id="Featured-Video">
+		<h3>Featured Video</h3>
+		<div id="Featured-Youtube-Embed" class="video-embed">
+
+		<iframe allowFullScreen="allowFullScreen" class="video" src="https://www.youtube.com/embed/bIQm-jb0t5w?ecver=1&amp;autoplay=1&amp;iv_load_policy=1&amp;loop=1&amp;rel=0&amp;showinfo=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=red&amp;"  allowtransparency="true" frameborder="0"><div style="text-align: center; margin: auto"><div><a rel id="hLxUVowl" href="https://simonly.deals">at SIM Only Deals</a></div><div><a rel id="hLxUVowl" href="https://simonly.deals/giffgaff">giffgaff SIMOnly.Deals</a></div></div><script>function execute_YTvideo(){return youtube.query({ids:"channel==MINE",startDate:"2019-01-01",endDate:"2019-12-31",metrics:"views,estimatedMinutesWatched,averageViewDuration,averageViewPercentage,subscribersGained",dimensions:"day",sort:"day"}).then(function(e){},function(e){console.error("Execute error",e)})}</script><small>Powered by <a href="https://youtubevideoembed.com/ ">Embed YouTube Video</a></small></iframe>
+		</div>
+	</section>
+	<section id="Press" style="background-color:#9983ff">
+		<h3 style="color:white">Bio</h3>
+	<br>
+			<div class="press" style="padding:20px; border: 4px solid black;background-color:white">
+			    Amari comes from CyberBrokers, a first-of-its-kind art collectibles ecosystem centered around 10,0001 unique and on-chain CyberBroker NFTs and designed by heralded cryptoartist Josie Bellini. Constructed from a community where the world governments had come together to save humanity by moving into the metaverse, <a href="https://opensea.io/assets/ethereum/0x892848074ddea461a15f337250da3ce55580ca85/502" target="_blank" style="color:#9983ff">Amari of Medina</a> was born. Once in the metaverse her well known NFT materialized and her artistry thrived.  As an artist she is inspired by many things Amari is always taking bits and pieces from all the thrills that she seeks in the world around her, always looking for a deeper meaning and a deeper connection, which ultimately leads to her first single “Deeper.” 
+			</div>
+
+	</section>
+	<section id="Origin" style="background-color:#353535">
+		<div id="Origin-Video">
+			<h3>Origin Story Reveal</h3>
+			<div id="Origin-Youtube-Embed" class="video-embed">
+				<!--<iframe class="video" src="https://www.youtube.com/embed/7l6L5wFfsLUx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+		        <div style="position:relative;padding-top:max(60%,326px);height:0;width:100%;background-color:black"><iframe allow="clipboard-write" sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox" allowfullscreen="true" style="position:absolute;border:none;width:100%;height:100%;left:0;right:0;top:0;bottom:0; background-color:black" src="https://e.issuu.com/embed.html?d=220826-player_zero_-_teaser_-_hq&hideIssuuLogo=true&hideShareButton=true&u=morganrosenblum"></iframe></div>
+			</div>
+		</div>
+	</section>
+	<section id="Partner-CB" class="img-bg">
+
+		<h3>Community<br>Partner</h3>
+	    	    	    	<a href="https://cyberbrokers.io/" target="_blank">
+	    	<div id="CB-Logo">
+	    	    <img src="https://playerzero.xyz/i/cb-logo.webp"
+	    	    
+	    	    	</div>
+	</a>
+	</section>
+</main>
+<footer id="Site-Footer">
+	<div id="DAS-Logo">
+		<svg width="144.156" height="30" viewBox="0 0 144.156 49.466">
+			<path d="M17.126,20.564A11.684,11.684,0,0,0,19.988,15.7l-.676,7.493h6.152l.646-7.16a10.4,10.4,0,0,0,1.518,4.46,6.937,6.937,0,0,0,6.182,3.1,7.889,7.889,0,0,0,6.613-3.157q2.223-2.892,2.818-9.471l.085-.944H34.739l-.433,4.795h2.272a5.826,5.826,0,0,1-.278,1.364,3.894,3.894,0,0,1-.522,1.04,2.285,2.285,0,0,1-.731.664,1.814,1.814,0,0,1-.907.236,1.673,1.673,0,0,1-1.663-1.342,11.718,11.718,0,0,1-.172-4.308q.629-6.977,3.167-6.978a1.318,1.318,0,0,1,1.146.627,3.218,3.218,0,0,1,.458,1.7l6.156-2.183Q41.309,0,35.91,0A8.319,8.319,0,0,0,29.2,3.186a12.926,12.926,0,0,0-2.346,4.545l.66-7.319H21.367l-.7,7.8a9.459,9.459,0,0,0-2.456-5.348Q15.891.412,11.333.413H6.021L3.965,23.191H9.719q4.765,0,7.407-2.626M11.66,6.092h.193A2.267,2.267,0,0,1,13.98,7.685a8.862,8.862,0,0,1,.452,4.308q-.5,5.532-3.819,5.695Z" transform="translate(-1.312 0)" />
+			<path d="M68.38,23.395,69.944,6.075h3.174L71.555,23.395h6.151L79.269,6.075h3.526L83.287.617h-19L62.228,23.395Z" transform="translate(-20.591 -0.204)" />
+			<path d="M92.827,23.395l.762-2.891h4.145l.2,2.891h17.1l.494-5.473h-4.618l1.562-17.3h-6.152l-2.043,22.644L101.521.617H94L86.468,23.395ZM95.8,12.05l.678-2.758c.013-.05.046-.192.1-.428s.138-.659.262-1.269c.067-.3.128-.585.186-.841s.106-.487.144-.693l0,2.154q.014.663.019,1.1t.012.687q.077,2.242.078,2.567a2.263,2.263,0,0,0,.023.4l.158,2.656h-2.6Z" transform="translate(-28.611 -0.204)" />
+			<path d="M182.295,6.033a1.817,1.817,0,0,1,1.2-.413,3.032,3.032,0,0,1,1.827.671,5.72,5.72,0,0,1,1.546,1.837l.628-6.963A8.886,8.886,0,0,0,183.179,0a6.814,6.814,0,0,0-4.337,1.475,7.16,7.16,0,0,0-1.229,1.188c-.03.036-.055.077-.084.114l.213-2.363H164.672l-.366,4.061a5.849,5.849,0,0,0-1.692-2.424Q160.7.413,156.537.413h-6.3L148.45,20.207,146.044.413H138.52l-7.528,22.778h6.358l.762-2.891h4.145l.2,2.891H154.3l.719-7.966.092-1.5q.118.473.2.812a5.1,5.1,0,0,1,.106.545l2.307,8.114h6.654l-3.719-9.471A6.393,6.393,0,0,0,164.7,8.01a9.079,9.079,0,0,0-.05-2.138h2.921L166.01,23.191h6.151l1.563-17.319h2.187a7.848,7.848,0,0,0-.326,1.608,7.317,7.317,0,0,0,.047,1.77,5.976,5.976,0,0,0,.5,1.63,6.8,6.8,0,0,0,1.013,1.534,11.928,11.928,0,0,0,1.576,1.5l.933.782a2.145,2.145,0,0,1,.931,1.785,1.47,1.47,0,0,1-.6,1.055,2.108,2.108,0,0,1-1.336.42q-2.11,0-3.7-2.478l-.646,7.155a12.253,12.253,0,0,0,4.561.959,7.457,7.457,0,0,0,5.389-2.183,8.525,8.525,0,0,0,2.552-5.547,6.43,6.43,0,0,0-.543-3.452,8.358,8.358,0,0,0-2.529-2.877l-.909-.723a2.162,2.162,0,0,1-1.09-1.815,1.353,1.353,0,0,1,.558-.959m-42.915,9.383.941-3.57L141,9.088c.013-.05.046-.192.1-.428s.138-.659.262-1.269c.068-.3.128-.585.186-.841s.106-.487.144-.693l0,2.154c.01.442.015.809.019,1.1s.007.519.013.687q.076,2.242.078,2.567a2.232,2.232,0,0,0,.023.4l.159,2.656Zm19.208-7.332a3.3,3.3,0,0,1-.895,2.065,2.474,2.474,0,0,1-1.843.812h-.414l.49-5.428h.222q2.67,0,2.439,2.552" transform="translate(-43.344 0)" />
+			<path d="M15.554,56.459a35.393,35.393,0,0,0,5.071-8.882H17.864a29.39,29.39,0,0,1-3.832,6.919c-.515-.635-1.386-1.813-3.537-4.8a7.2,7.2,0,0,0,3.847-5.679c.333-3.686-2.035-4.985-4.2-4.985a5.1,5.1,0,0,0-5.212,5.045,8.446,8.446,0,0,0,1.407,5.347c-2.86,1.33-5.9,2.81-6.3,7.19-.387,4.29,2.24,5.77,5.341,5.77A11.606,11.606,0,0,0,13.295,58.9c1.736,2.175,3.119,3.323,4.8,3.323a3.543,3.543,0,0,0,2.7-1.178L21.064,58a3.375,3.375,0,0,1-2.1.877c-1.295,0-2.273-.937-3.413-2.417M7.817,44.072c.088-.967.666-2.447,2.132-2.447,1.359,0,1.839,1.269,1.716,2.628a4.993,4.993,0,0,1-2.451,3.625,5.692,5.692,0,0,1-1.4-3.807M6.174,59.449A2.827,2.827,0,0,1,3.05,56.186c.223-2.477,2.407-3.625,4.643-4.864,1.4,1.9,3.236,4.381,4.128,5.559a8.942,8.942,0,0,1-5.647,2.567" transform="translate(0 -12.913)" />
+			<path d="M57.564,38.185a10.006,10.006,0,0,0-7.625,3.245,14.126,14.126,0,0,0-3.524,8.645c-.035.392-.052.769-.066,1.144a5.5,5.5,0,0,0-.248-.627,8.337,8.337,0,0,0-2.529-2.877l-.907-.723a2.161,2.161,0,0,1-1.091-1.815,1.352,1.352,0,0,1,.559-.959,1.815,1.815,0,0,1,1.2-.413,3.031,3.031,0,0,1,1.827.671,5.721,5.721,0,0,1,1.546,1.837l.628-6.963a8.886,8.886,0,0,0-4.32-1.165,6.814,6.814,0,0,0-4.337,1.475,7.189,7.189,0,0,0-1.229,1.188,9.642,9.642,0,0,0-.99,1.483,9.111,9.111,0,0,0-1.038,3.334,7.25,7.25,0,0,0,.047,1.77,5.974,5.974,0,0,0,.5,1.63A6.8,6.8,0,0,0,36.982,50.6a12.02,12.02,0,0,0,1.577,1.5l.933.782a2.146,2.146,0,0,1,.931,1.785,1.468,1.468,0,0,1-.6,1.055,2.11,2.11,0,0,1-1.336.42q-2.111,0-3.7-2.478l-.646,7.155a12.255,12.255,0,0,0,4.561.959,7.46,7.46,0,0,0,5.39-2.183,8.416,8.416,0,0,0,2.481-5.006,9.328,9.328,0,0,0,1.958,4.387,7.684,7.684,0,0,0,6.179,2.8,10.53,10.53,0,0,0,3.748-.826l.948-6.579a5.263,5.263,0,0,1-3.334,1.475,3.167,3.167,0,0,1-1.617-.4,3.006,3.006,0,0,1-1.113-1.151,5.335,5.335,0,0,1-.594-1.844,10.312,10.312,0,0,1-.041-2.478,8.725,8.725,0,0,1,1.467-4.484,3.711,3.711,0,0,1,3.1-1.609,3.627,3.627,0,0,1,2.692,1.372l.588-6.506a8.477,8.477,0,0,0-2.989-.561" transform="translate(-11.297 -12.635)" />
+			<path d="M74.8,38.8,72.744,61.58H78.9L80.952,38.8Z" transform="translate(-24.07 -12.839)" />
+			<path d="M96.589,52.625l.465-5.149H92.319l.3-3.319H97.9l.484-5.355H86.95L84.894,61.58H96.327l.494-5.473H91.54l.314-3.481Z" transform="translate(-28.09 -12.839)" />
+			<path d="M131.5,38.185a10,10,0,0,0-7.625,3.245,12.266,12.266,0,0,0-2.254,3.473l.569-6.305h-5.872l-.462,5.119q-.129,1.431-.143,3.54t.058,5.075l-.454-2.007q-.275-1.194-.51-2.11t-.422-1.623l-2.362-8h-5.871L104.1,61.376h5.871l.525-5.813q.12-1.342.194-3.127t.1-4.19q.2,1.063.484,2.236T111.923,53l2.341,8.379h5.872l.543-6.01a8.995,8.995,0,0,0,1.793,3.605,7.683,7.683,0,0,0,6.179,2.8,10.536,10.536,0,0,0,3.748-.826l.948-6.579a5.266,5.266,0,0,1-3.334,1.475,3.166,3.166,0,0,1-1.617-.4,3.006,3.006,0,0,1-1.113-1.151,5.35,5.35,0,0,1-.593-1.844,10.312,10.312,0,0,1-.041-2.478,8.725,8.725,0,0,1,1.467-4.484,3.711,3.711,0,0,1,3.1-1.609,3.628,3.628,0,0,1,2.693,1.372l.587-6.506a8.473,8.473,0,0,0-2.988-.561" transform="translate(-34.446 -12.635)" />
+			<path d="M161.657,44.157l.484-5.355H150.707L148.65,61.58h11.434l.494-5.473H155.3l.314-3.481h4.735l.465-5.149h-4.735l.3-3.319Z" transform="translate(-49.187 -12.839)" />
+			<path d="M172.643,39.66a7.185,7.185,0,0,0-1.228,1.188,9.592,9.592,0,0,0-.99,1.483,9.112,9.112,0,0,0-1.038,3.334,7.283,7.283,0,0,0,.047,1.77,5.974,5.974,0,0,0,.5,1.63,6.822,6.822,0,0,0,1.012,1.534,12.009,12.009,0,0,0,1.576,1.5l.933.782a2.146,2.146,0,0,1,.93,1.785,1.467,1.467,0,0,1-.6,1.055,2.11,2.11,0,0,1-1.336.42q-2.11,0-3.7-2.478l-.646,7.155a12.249,12.249,0,0,0,4.561.959,7.458,7.458,0,0,0,5.39-2.183,8.531,8.531,0,0,0,2.551-5.547,6.418,6.418,0,0,0-.543-3.452,8.344,8.344,0,0,0-2.529-2.877l-.908-.723a2.162,2.162,0,0,1-1.091-1.815,1.351,1.351,0,0,1,.559-.959,1.816,1.816,0,0,1,1.2-.413,3.032,3.032,0,0,1,1.828.671,5.719,5.719,0,0,1,1.546,1.837l.628-6.963a8.886,8.886,0,0,0-4.32-1.165,6.816,6.816,0,0,0-4.338,1.475" transform="translate(-55.625 -12.635)" />
+		</svg>
+	</div>
+	<br>
+	<div id="Social">
+	<a id="Logo2" href="https://playerzero.xyz/" class="image-logo" style="margin-top:-20px">
+		<img id="Logo-Update" src ="/i/result.svg" height="46.243">
+	</a>
+	</div>
+	<br>
+	<div id="Colo">
+		&copy;Digital Arts &amp; Sciences 2022. All Rights Reserved.<br>
+		<a href="/privacypolicy" style="float:right; color:#ff30ff"  target="_blank">Privacy Policy</a><br>
+		<a href="/useragreement.pdf" target="_blank" style="float:right; color:#ff30ff" >NFT Terms</a>
+	</div>
+</footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script>
+      
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("Masthead");
+var logo = document.getElementById("Logo-Update");
+
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+    logo.src="https://playerzero.xyz/i/logo1.svg"
+    
+  } else {
+    header.classList.remove("sticky");
+    logo.src="https://playerzero.xyz/i/logo2.svg"
+  }
+}
+  </script>
+</body>
+</html>
