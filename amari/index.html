@@ -38,12 +38,12 @@
 </script>
 
 <style>
-    	.image-logo {	
-  display: flex;	
-  justify-content: center;	
+    	.image-logo {
+  display: flex;
+  justify-content: center;
 }
 
-        
+
         #Mobile-Nav {
             position: absolute;
             background: black;
@@ -55,7 +55,7 @@
             transition: all 0.25s linear;
             transform: translateY(-100vh);
         }
-        
+
         #Mobile-Nav--List {
             display: flex;
             align-items: center;
@@ -65,7 +65,7 @@
             pointer-events: none;
             transition: all 0.25s linear;
         }
-        
+
         #Mobile-Nav--List a {
             color: white;
             font-size: 40px;
@@ -74,21 +74,21 @@
             z-index: 2;
             transition: all 0.25s linear;
         }
-        
+
         #Mobile-Nav--List a:hover {
             color: var(--clr-neon-blue);
         }
-        
+
         #Mobile-Nav.active {
             transform: translateY(0);
             height:100vh;
         }
-        
+
         #Mobile-Nav.active #Mobile-Nav--List {
             opacity: 1;
             pointer-events: initial;
         }
-        
+
         #Hamburger {
             --bun-height: 8px;
             --thickness: 2px;
@@ -100,7 +100,7 @@
             cursor: pointer;
             display: none;
         }
-        
+
         @media (max-width: 640px) {
             #Hamburger {
                 display: flex;
@@ -111,8 +111,8 @@
                 display: none;
             }
         }
-        
-        
+
+
         #Hamburger .patty,
         #Hamburger::before,
         #Hamburger::after {
@@ -121,40 +121,40 @@
             width: 100%;
             transition: all 0.25s linear;
         }
-        
+
         #Hamburger::before,
         #Hamburger::after {
             content: "";
             position: absolute;
         }
-        
+
         #Hamburger::before {
             transform: translateY(calc(var(--bun-height) * -1));
         }
-        
+
         #Hamburger::after {
             transform: translateY(var(--bun-height));
         }
-        
+
         #Hamburger:hover {
             --bun-height: 10px;
         }
-        
+
         #Hamburger.active {
             --bun-height: 0;
         }
-        
+
         #Hamburger-Close{
             --bun-height: 0;
         }
-        
+
         .no-scroll {
             height: 100%;
             overflow: hidden;
-               position: fixed; 
+               position: fixed;
 
         }
-        
+
         @media (max-width: 640px) {
           #Main-Nav > a {
             display: none;
@@ -166,20 +166,20 @@
               display: none;
           }
         }
-        
+
         .flex-container {
     display: flex;
         }
-        
+
         .flex-child {
             flex: 1;
             border: 2px solid yellow;
-        }  
-        
+        }
+
         .flex-child:first-child {
             margin-right: 20px;
-        } 
-        
+        }
+
                 #Logo2 {
                   width: min(280px, 100%);
                   position: absolute;
@@ -187,7 +187,7 @@
                   transform: translateX(-50%);
                 }
 
-        
+
     </style>
     <script>
         function burger() {
@@ -196,7 +196,7 @@
             document.getElementById("Mobile-Nav").classList.add("active");
             document.getElementById("Amari-Hero").style.display="none";
         }
-        
+
         function closeBurger() {
             document.getElementById("Hamburger").classList.remove("active");
             document.getElementById("Body").classList.remove("no-scroll");
@@ -264,14 +264,14 @@
                 <img id="Logo-Update" src="/i/logo2.svg" width="150" height="46.243" viewbox="0 0 228 46.243">
             </a>
 
-        
+
         <div class="flex-container" id="Mobile">
             <a id="Logo-Mobile" href="https://playerzero.xyz/"  style="margin-right:60px;">
                 <img id="Logo-Update" src="/i/logo2.svg" width="150" height="46.243" viewbox="0 0 228 46.243">
             </a>
-        
+
             <button id="Hamburger" onclick="burger()" style="margin-left:60px" class=""> <span class="patty"></span></button>
-          
+
         </div>
 
             <div class="social" id="Main-Nav-Social">
@@ -304,15 +304,15 @@
                 <!--</a>-->
             </div>
         </header>
-        
-        	
+
+
 	<section id="Countdown">
 		<a id="Auction" class="frosted button" href="https://playerzero.xyz/amari/mint" style="background-color:black">Mint Now</a>
-		
+
 		<!--<a id="Auction" class="frosted button" href="/mint">Mint Now (For CyberBroker Holders)</a>-->
-			
+
 	</section>
-        
+
 <main id="Site" class="amari">
 	<!-- amari hero -->
 	<section id="Amari-Hero" class="img-bg">
@@ -325,7 +325,7 @@
 			</div>
 			</div>
 	</section>
-	
+
 	<!-- amari info -->
 	<section id="Amari-Info">
 		<div class="container">
@@ -466,7 +466,7 @@
 		<h3 style="color:white">Bio</h3>
 	<br>
 			<div class="press" style="padding:20px; border: 4px solid black;background-color:white">
-			    Amari comes from CyberBrokers, a first-of-its-kind art collectibles ecosystem centered around 10,0001 unique and on-chain CyberBroker NFTs and designed by heralded cryptoartist Josie Bellini. Constructed from a community where the world governments had come together to save humanity by moving into the metaverse, <a href="https://opensea.io/assets/ethereum/0x892848074ddea461a15f337250da3ce55580ca85/502" target="_blank" style="color:#9983ff">Amari of Medina</a> was born. Once in the metaverse her well known NFT materialized and her artistry thrived.  As an artist she is inspired by many things Amari is always taking bits and pieces from all the thrills that she seeks in the world around her, always looking for a deeper meaning and a deeper connection, which ultimately leads to her first single “Deeper.” 
+			    Amari comes from CyberBrokers, a first-of-its-kind art collectibles ecosystem centered around 10,0001 unique and on-chain CyberBroker NFTs and designed by heralded cryptoartist Josie Bellini. Constructed from a community where the world governments had come together to save humanity by moving into the metaverse, <a href="https://opensea.io/assets/ethereum/0x892848074ddea461a15f337250da3ce55580ca85/502" target="_blank" style="color:#9983ff">Amari of Medina</a> was born. Once in the metaverse her well known NFT materialized and her artistry thrived.  As an artist she is inspired by many things Amari is always taking bits and pieces from all the thrills that she seeks in the world around her, always looking for a deeper meaning and a deeper connection, which ultimately leads to her first single “Deeper.”
 			</div>
 
 	</section>
@@ -485,7 +485,7 @@
 	    	    	    	<a href="https://cyberbrokers.io/" target="_blank">
 	    	<div id="CB-Logo">
 	    	    <img src="https://playerzero.xyz/i/cb-logo.webp"
-	    	    
+
 	    	    	</div>
 	</a>
 	</section>
@@ -521,7 +521,7 @@
 </footer>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script>
-      
+
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("Masthead");
@@ -533,7 +533,7 @@ function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
     logo.src="https://playerzero.xyz/i/logo1.svg"
-    
+
   } else {
     header.classList.remove("sticky");
     logo.src="https://playerzero.xyz/i/logo2.svg"
