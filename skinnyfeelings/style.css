@@ -579,6 +579,7 @@ body {
   padding-top: 100px;
   position: relative;
   z-index: 1;
+  margin-bottom: 100px;
 }
 
 #skinnyfeelings #Newsletter {
@@ -888,6 +889,7 @@ body {
     padding-right: 109px;
     padding-left: 109px;
     padding-top: 0px;
+    margin-bottom: 100px;
   }
 
   #skinnyfeelings #Newsletter {
