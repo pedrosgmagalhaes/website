@@ -790,6 +790,7 @@ body {
   height: 105px;
   transform: translate(-50%, -50%);
 }
+
 .skinnyfeelings-story h2 {
   font-family: var(--f-fut-cond);
   font-style: normal;
@@ -833,7 +834,46 @@ body {
   margin-bottom: 0px;
 }
 
+.skinnyfeelings-story #Origin-Youtube-Embed {
+  position: relative;
+}
+
+.skinnyfeelings-story #Origin-Youtube-Embed iframe {
+  z-index: 1;
+}
+
+.skinnyfeelings-story #Origin-Youtube-Embed:after {
+  content: '';
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  left: 50%;
+  top: 50%;
+  background: rgba(77, 39, 193, 0.9);
+  filter: blur(100px);
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
 @media (min-width: 1200px) {
+  .skinnyfeelings-story #Origin-Youtube-Embed:after {
+    content: '';
+    position: absolute;
+    width: 540px;
+    height: 540px;
+    left: 50%;
+    top: 50%;
+    background: rgba(77, 39, 193, 0.9);
+    filter: blur(190px);
+    z-index: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .skinnyfeelings-story #Origin-Youtube-Embed iframe {
+    height: 700px;
+  }
+
+
   .skinnyfeelings-video iframe {
     height: 800px;
   }
