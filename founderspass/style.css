@@ -843,6 +843,7 @@ h2 {
   justify-content: center;
   padding: var(--unit-big) var(--unit-small);
 }
+
 .inside-hero h1 {
   font: 800 italic 120px/0.85 var(--f-fut);
   text-transform: uppercase;

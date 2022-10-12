@@ -45,11 +45,11 @@
             display: flex;
             justify-content: center;
         }
-        
+
         body{
             background-color:black;
         }
-        
+
         #Mobile-Nav {
             position: absolute;
             background: black;
@@ -61,7 +61,7 @@
             transition: all 0.25s linear;
             transform: translateY(-100vh);
         }
-        
+
         #Mobile-Nav--List {
             display: flex;
             align-items: center;
@@ -71,7 +71,7 @@
             pointer-events: none;
             transition: all 0.25s linear;
         }
-        
+
         #Mobile-Nav--List a {
             color: white;
             font-size: 40px;
@@ -80,21 +80,21 @@
             z-index: 2;
             transition: all 0.25s linear;
         }
-        
+
         #Mobile-Nav--List a:hover {
             color: var(--clr-neon-blue);
         }
-        
+
         #Mobile-Nav.active {
             transform: translateY(0);
             height:100vh;
         }
-        
+
         #Mobile-Nav.active #Mobile-Nav--List {
             opacity: 1;
             pointer-events: initial;
         }
-        
+
         #Hamburger {
             --bun-height: 8px;
             --thickness: 2px;
@@ -106,7 +106,7 @@
             cursor: pointer;
             display: none;
         }
-        
+
         @media (max-width: 640px) {
             #Hamburger {
                 display: flex;
@@ -120,8 +120,8 @@
                 display: none;
             }
         }
-        
-        
+
+
         #Hamburger .patty,
         #Hamburger::before,
         #Hamburger::after {
@@ -130,40 +130,40 @@
             width: 100%;
             transition: all 0.25s linear;
         }
-        
+
         #Hamburger::before,
         #Hamburger::after {
             content: "";
             position: absolute;
         }
-        
+
         #Hamburger::before {
             transform: translateY(calc(var(--bun-height) * -1));
         }
-        
+
         #Hamburger::after {
             transform: translateY(var(--bun-height));
         }
-        
+
         #Hamburger:hover {
             --bun-height: 10px;
         }
-        
+
         #Hamburger.active {
             --bun-height: 0;
         }
-        
+
         #Hamburger-Close{
             --bun-height: 0;
         }
-        
+
         .no-scroll {
             height: 100%;
             overflow: hidden;
-               position: fixed; 
+               position: fixed;
 
         }
-        
+
         @media (max-width: 640px) {
           #Main-Nav > a {
             display: none;
@@ -174,30 +174,81 @@
           #Main-Nav-Social > a {
               display: none;
           }
-          
+
         }
-        
+
         #Logo2 {
   width: min(280px, 100%);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-        
+
         .flex-container {
     display: flex;
         }
-        
+
         .flex-child {
             flex: 1;
             border: 2px solid yellow;
-        }  
-        
+        }
+
         .flex-child:first-child {
             margin-right: 20px;
-        } 
+        }
 
-        
+        #Main-Nav .dropdown {
+          display: none;
+        }
+
+        @media (min-width: 641px) {
+          #Main-Nav .dropdown {
+            display: block;
+            position: relative;
+            cursor: pointer;
+          }
+
+          #Main-Nav .dropdown:hover button {
+            color: #FD40FC;
+            cursor: pointer;
+          }
+
+          #Main-Nav .dropdown-content {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 16px 20px;
+            z-index: 10;
+            background-color: #000;
+            background: #101010;
+            border: 1px solid #FFFFFF;
+            bottom: -90px;
+            left: -19px;
+          }
+
+          #Main-Nav .dropdown:hover .dropdown-content {
+            display: flex;
+          }
+
+          #Main-Nav .dropdown-content a {
+            font-family: var(--f-pir);
+            font-style: italic;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            padding: 5px 0;
+          }
+
+          #Main-Nav .dropdown-content a:hover {
+            color: #FD40FC;
+          }
+        }
+
+
     </style>
     <script>
         function burger() {
@@ -205,7 +256,7 @@
             document.getElementById("Body").classList.add("no-scroll");
             document.getElementById("Mobile-Nav").classList.add("active");
         }
-        
+
         function closeBurger() {
             document.getElementById("Hamburger").classList.remove("active");
             document.getElementById("Body").classList.remove("no-scroll");
@@ -214,7 +265,7 @@
     </script>
 </head>
 
-<body id="Body">
+<body id="Body" onload="getStats(1)">
     <!-- partial:index.partial.html -->
 
     <div id="Site-Frame" style="height:100vh">
@@ -224,8 +275,13 @@
                 <a href="/team">Team</a>
                 <a href="/founderspass" style="color:#ff2fff;">Founders Pass</a>
                 <a href="/lore">Lore</a>
-                <!--<a href="/presale" >Presale</a>-->
-                <a href="/amari">Amari</a>
+                <div class="dropdown">
+                  <button class="dropbtn">ARTISTS</button>
+                  <div class="dropdown-content">
+                    <a href="/amari">Amari</a>
+                    <a href="/skinnyfeelings">skinnyfeelings</a>
+                  </div>
+                </div>
             </nav>
             <nav id="Mobile-Nav">
                 <div id="Mobile-Nav--List">
@@ -237,6 +293,7 @@
                     <a href="/lore">Lore</a>
                     <!--<a href="/presale" >Presale</a>-->
                     <a href="/amari">Amari</a>
+                    <a href="/skinnyfeelings">skinnyfeelings</a>
                     <div class="social">
                         <a href="https://discord.gg/playerzero" target="_blank" class="icon--discord">
                             <svg height="24" viewBox="0 0 21.97 25.351">
@@ -274,14 +331,14 @@
                 <img id="Logo-Update" src="/i/logo2.svg" width="150" height="46.243" viewbox="0 0 228 46.243">
             </a>
 
-        
+
         <div class="flex-container" id="Mobile">
             <a id="Logo-Mobile" href="https://playerzero.xyz/"  style="margin-right:60px;">
                 <img id="Logo-Update" src="/i/logo2.svg" width="150" height="46.243" viewbox="0 0 228 46.243">
             </a>
-        
+
             <button id="Hamburger" onclick="burger()" style="margin-left:60px" class=""> <span class="patty"></span></button>
-          
+
         </div>
 
             <div class="social" id="Main-Nav-Social">
@@ -319,20 +376,20 @@
         <main id="Site" class="bidding-interface" style="height:auto">
             <section id="Bidding" class="img-bg" style="height:auto;background:black">
                 <div class="container" >
-                    
-                    
+
+
                     <div id="Current-Pass-Graphic" class="item" style="width:auto; max-height:450px; height:450px">
                                   <img id="Graphic" src="https://playerzero.xyz/i/FVCKRENDER_Prism_Transparent (1).gif">
                          <video id="Graphic-Video" style="display:none" loop name="media" playsinline="playsinline" muted="no" preload="yes" autoplay="autoplay" data-setup='{"autoplay":"any"}'></video>
-             
+
                     </div>
-                    
+
                     <style>
                         #Bid-Btn:hover {
                   background: #ff30ff !important;
                   color: white;
                 }
-                
+
 .button--small-bid {
   font-size: 15px;
   background-color:white;
@@ -363,9 +420,9 @@
 
 
                     </style>
-                    
-   
-                    
+
+
+
                     <div class="item">
                         <div class="pass" >
                             <h4 id="Connected-Address" style="display:none; color:#ff2fff; text-align:left"></h4>
@@ -398,9 +455,9 @@
                     </div>
                 </div>
             </section>
-            
-            
-            
+
+
+
 	<section id="Pass-Overview">
 		<div class="top img-bg magic-height">
 				<div class="frosted go-left" >
@@ -444,7 +501,7 @@
 					<p class="small">Opportunity to shape the future and direction of future Player Zero Records initiatives</p>
 				</div>
 			</main>
-			
+
 						<header>
 				<strong ><h3>MINTING BONUS: 2 Free VIP tickets to any festival or concert of your choice (t&c's apply)</h3></strong>
 					</header>
@@ -460,10 +517,10 @@
 			<!--	</div>-->
 			<!--</main>-->
 
-			
+
 		</section>
 		<!--<section id="Short-Term-Roadmap" class="img-bg go-right">-->
-		    
+
 		<!--	<div class="copy">-->
 		<!--		<h3>Short Term Roadmap</h3>-->
 		<!--		<div class="item">-->
@@ -495,9 +552,9 @@
 		<!--		</div>-->
 		<!--	</div>-->
 		<!--</section>-->
-		
-		
-		
+
+
+
 	<section id="Short-Term-Roadmap" class="top">
 	    		<header style="text-align:center">
 				<h3 style="margin-top:50px;">Short term roadmap</h3>
@@ -516,7 +573,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 	    <div class="img-bg magic-height2">
 			<div class="container">
 				<div class="frosted go-right">
@@ -530,7 +587,7 @@
 				</div>
 			</div>
 		</div>
-	
+
 			<div class="img-bg magic-height2">
 			<div class="container">
 				<div class="frosted go-left">
@@ -543,12 +600,12 @@
 				</div>
 			</div>
 		</div>
-	
+
 		</section>
-		
-		
-		
-		
+
+
+
+
 		<section id="PZ-Universe" class="img-bg">
 			<div class="container">
 				<div class="copy">
@@ -557,7 +614,7 @@
 				</div>
 			</div>
 		</section>
-		
+
 		<section id="FAQ">
 			<div class="container">
 				<h3>Founders Pass FAQ</h3>
@@ -619,11 +676,11 @@
 			</div>
 			</div>
 		</section>
-            
-            
-            
-            
-            
+
+
+
+
+
         </main>
 
 
@@ -658,11 +715,11 @@
         </footer>
     </div>
     <!-- partial -->
-    
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
   <script  src="./script.js?8"></script>
 
-        <script src="./eth.js?2127"></script>
+        <script src="./eth.js?2159"></script>
     <script src='https://unpkg.com/swiper@8/swiper-bundle.min.js'></script>
     <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/web3modal"></script>
