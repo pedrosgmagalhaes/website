@@ -37,9 +37,9 @@
 </script>
 
 <style>
-    	.image-logo {	
-  display: flex;	
-  justify-content: center;	
+    	.image-logo {
+  display: flex;
+  justify-content: center;
 }
 </style>
 
@@ -48,7 +48,7 @@
             display: flex;
             justify-content: center;
         }
-        
+
         #Mobile-Nav {
             position: absolute;
             background: black;
@@ -60,7 +60,7 @@
             transition: all 0.25s linear;
             transform: translateY(-100vh);
         }
-        
+
         #Mobile-Nav--List {
             display: flex;
             align-items: center;
@@ -70,7 +70,7 @@
             pointer-events: none;
             transition: all 0.25s linear;
         }
-        
+
         #Mobile-Nav--List a {
             color: white;
             font-size: 40px;
@@ -79,20 +79,20 @@
             z-index: 2;
             transition: all 0.25s linear;
         }
-        
+
         #Mobile-Nav--List a:hover {
             color: var(--clr-neon-blue);
         }
-        
+
         #Mobile-Nav.active {
             transform: translateY(0);
         }
-        
+
         #Mobile-Nav.active #Mobile-Nav--List {
             opacity: 1;
             pointer-events: initial;
         }
-        
+
         #Hamburger {
             --bun-height: 8px;
             --thickness: 2px;
@@ -104,7 +104,7 @@
             cursor: pointer;
             display: none;
         }
-        
+
         @media (max-width: 640px) {
             #Hamburger {
                 display: flex;
@@ -115,8 +115,8 @@
                 display: none;
             }
         }
-        
-        
+
+
         #Hamburger .patty,
         #Hamburger::before,
         #Hamburger::after {
@@ -125,40 +125,40 @@
             width: 100%;
             transition: all 0.25s linear;
         }
-        
+
         #Hamburger::before,
         #Hamburger::after {
             content: "";
             position: absolute;
         }
-        
+
         #Hamburger::before {
             transform: translateY(calc(var(--bun-height) * -1));
         }
-        
+
         #Hamburger::after {
             transform: translateY(var(--bun-height));
         }
-        
+
         #Hamburger:hover {
             --bun-height: 10px;
         }
-        
+
         #Hamburger.active {
             --bun-height: 0;
         }
-        
+
         #Hamburger-Close{
             --bun-height: 0;
         }
-        
+
         .no-scroll {
             height: 100%;
             overflow: hidden;
-               position: fixed; 
+               position: fixed;
 
         }
-        
+
         @media (max-width: 640px) {
           #Main-Nav > a {
             display: none;
@@ -170,20 +170,20 @@
               display: none;
           }
         }
-        
+
         .flex-container {
     display: flex;
         }
-        
+
         .flex-child {
             flex: 1;
             border: 2px solid yellow;
-        }  
-        
+        }
+
         .flex-child:first-child {
             margin-right: 20px;
-        } 
-        
+        }
+
                 #Logo2 {
                   width: min(280px, 100%);
                   position: absolute;
@@ -191,7 +191,58 @@
                   transform: translateX(-50%);
                 }
 
-        
+
+                #Main-Nav .dropdown {
+                  display: none;
+                }
+
+                @media (min-width: 641px) {
+                  #Main-Nav .dropdown {
+                    display: block;
+                    position: relative;
+                    cursor: pointer;
+                  }
+
+                  #Main-Nav .dropdown:hover button {
+                    color: #FD40FC;
+                    cursor: pointer;
+                  }
+
+                  #Main-Nav .dropdown-content {
+                    position: absolute;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    padding: 16px 20px;
+                    z-index: 10;
+                    background-color: #000;
+                    background: #101010;
+                    border: 1px solid #FFFFFF;
+                    bottom: -90px;
+                    left: -19px;
+                  }
+
+                  #Main-Nav .dropdown:hover .dropdown-content {
+                    display: flex;
+                  }
+
+                  #Main-Nav .dropdown-content a {
+                    font-family: var(--f-pir);
+                    font-style: italic;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 140%;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    padding: 5px 0;
+                  }
+
+                  #Main-Nav .dropdown-content a:hover {
+                    color: #FD40FC;
+                  }
+                }
+
     </style>
     <script>
         function burger() {
@@ -199,7 +250,7 @@
             document.getElementById("Body").classList.add("no-scroll");
             document.getElementById("Mobile-Nav").classList.add("active");
         }
-        
+
         function closeBurger() {
             document.getElementById("Hamburger").classList.remove("active");
             document.getElementById("Body").classList.remove("no-scroll");
@@ -218,8 +269,13 @@
                 <a href="/team">Team</a>
                 <a href="/founderspass">Founders Pass</a>
                 <a href="/lore" style="color:#ff2fff;">Lore</a>
-                <!--<a href="/presale">Presale</a>-->
-                <a href="/amari">Amari</a>
+                <div class="dropdown">
+                  <button class="dropbtn">ARTISTS</button>
+                  <div class="dropdown-content">
+                    <a href="/amari">Amari</a>
+                    <a href="/skinnyfeelings">skinnyfeelings</a>
+                  </div>
+                </div>
             </nav>
             <nav id="Mobile-Nav">
                 <div id="Mobile-Nav--List">
@@ -231,6 +287,7 @@
                     <a href="/lore" style="color:#ff2fff;">Lore</a>
                     <!--<a href="/presale">Presale</a>-->
                     <a href="/amari">Amari</a>
+                    <a href="/skinnyfeelings">skinnyfeelings</a>
                     <div class="social">
                         <a href="https://discord.gg/playerzero" target="_blank" class="icon--discord">
                             <svg height="24" viewBox="0 0 21.97 25.351">
@@ -268,14 +325,14 @@
                 <img id="Logo-Update" src="/i/logo2.svg" width="150" height="46.243" viewbox="0 0 228 46.243">
             </a>
 
-        
+
         <div class="flex-container" id="Mobile">
             <a id="Logo-Mobile" href="https://playerzero.xyz/"  style="margin-right:60px;">
                 <img id="Logo-Update" src="/i/logo2.svg" width="150" height="46.243" viewbox="0 0 228 46.243">
             </a>
-        
+
             <button id="Hamburger" onclick="burger()" style="margin-left:60px" class=""> <span class="patty"></span></button>
-          
+
         </div>
 
             <div class="social" id="Main-Nav-Social">
@@ -387,7 +444,7 @@
 </footer>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script>
-      
+
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("Masthead");
@@ -399,7 +456,7 @@ function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
     logo.src="https://playerzero.xyz/i/logo1.svg"
-    
+
   } else {
     header.classList.remove("sticky");
     logo.src="https://playerzero.xyz/i/logo2.svg"

@@ -130,9 +130,37 @@ async function getStats(z) {
         
  
         
-            await delay(15);
+            await delay(25);
     getStats();
+    getTimer();
    
+}
+
+async function getTimer(){
+    
+    const RPC = "https://mainnet.infura.io/v3/54297732d5e249febec6978df023ee45";
+                const provider = new ethers.providers.JsonRpcProvider(RPC);
+        // await provider.send("eth_requestAccounts", []);
+        // const signer = provider.getSigner();
+        // let userAddress = await signer.getAddress();
+        const CONTRACT_ADDRESS = new ethers.Contract(contract.address, contract.abi, provider);
+    
+                    var et = await CONTRACT_ADDRESS.endTime();
+        
+                    try{
+                    rt = await CONTRACT_ADDRESS.getRemainingTime();
+                    remainingTime = Number(BigInt(rt));
+                    }
+                    catch(e){
+                    rt = 0  ;
+                    remainingTime = 0;
+                    }
+                    
+                    var endTime = Number(BigInt(et));
+                    var key = new Date(0); // The 0 there is the key, which sets the date to the epoch
+                    countdown = key.setUTCSeconds(endTime);
+                    
+                    console.log(countdown);
 }
 
 
@@ -141,7 +169,7 @@ async function getInfo(z) {
             countdown = 0;
             
         const RPC = "https://mainnet.infura.io/v3/54297732d5e249febec6978df023ee45";
-        const provider = new ethers.providers.JsonRpcProvider(RPC);
+                const provider = new ethers.providers.JsonRpcProvider(RPC);
         // await provider.send("eth_requestAccounts", []);
         // const signer = provider.getSigner();
         // let userAddress = await signer.getAddress();
@@ -151,22 +179,9 @@ async function getInfo(z) {
         
         var a = await CONTRACT_ADDRESS.amount();
         var currentBidder = await CONTRACT_ADDRESS.bidder();
-        var et = await CONTRACT_ADDRESS.endTime();
         
-        try{
-        rt = await CONTRACT_ADDRESS.getRemainingTime();
-        remainingTime = Number(BigInt(rt));
-        }
-        catch(e){
-        rt = 0  ;
-        remainingTime = 0;
-        }
-        
-        var currentToken = Number(BigInt(ct)) + 1;
-        var currentBid = Number(BigInt(a))/1000000000000000000;
-        var endTime = Number(BigInt(et));
-        var key = new Date(0); // The 0 there is the key, which sets the date to the epoch
-        countdown = key.setUTCSeconds(endTime);
+                            var currentToken = Number(BigInt(ct)) + 1;
+                    var currentBid = Number(BigInt(a))/1000000000000000000;
         
         nextMintAmount = (currentBid*nextMint).toFixed(4);
         
@@ -174,10 +189,26 @@ async function getInfo(z) {
     document.getElementById("Graphic").style.display="none";
     document.getElementById("Graphic-Video").style.display="flex";
     }
+    
+                        var et = await CONTRACT_ADDRESS.endTime();
+        
+                    try{
+                    rt = await CONTRACT_ADDRESS.getRemainingTime();
+                    remainingTime = Number(BigInt(rt));
+                    }
+                    catch(e){
+                    rt = 0  ;
+                    remainingTime = 0;
+                    }
+                    
+                    var endTime = Number(BigInt(et));
+                    var key = new Date(0); // The 0 there is the key, which sets the date to the epoch
+                    countdown = key.setUTCSeconds(endTime);
             
         
         if(z === 0){
                 var timer = setInterval(function () {
+                    
                 	var n = new Date().getTime();
                 	var d = countdown - n;
                 	var days = Math.floor(d / (1000 * 60 * 60 * 24));
@@ -224,8 +255,7 @@ async function getInfo(z) {
         document.getElementById("Bidder-Link").style.display="none";
         }
     
-        
-   
+  
 }
 
 
