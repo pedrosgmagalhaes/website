@@ -187,6 +187,57 @@
                   transform: translateX(-50%);
                 }
 
+                #Main-Nav .dropdown {
+                  display: none;
+                }
+
+                @media (min-width: 641px) {
+                  #Main-Nav .dropdown {
+                    display: block;
+                    position: relative;
+                    cursor: pointer;
+                  }
+
+                  #Main-Nav .dropdown:hover button {
+                    color: #FD40FC;
+                    cursor: pointer;
+                  }
+
+                  #Main-Nav .dropdown-content {
+                    position: absolute;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    padding: 16px 20px;
+                    z-index: 10;
+                    background-color: #000;
+                    background: #101010;
+                    border: 1px solid #FFFFFF;
+                    bottom: -90px;
+                    left: -19px;
+                  }
+
+                  #Main-Nav .dropdown:hover .dropdown-content {
+                    display: flex;
+                  }
+
+                  #Main-Nav .dropdown-content a {
+                    font-family: var(--f-pir);
+                    font-style: italic;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 140%;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    padding: 5px 0;
+                  }
+
+                  #Main-Nav .dropdown-content a:hover {
+                    color: #FD40FC;
+                  }
+                }
+
 
     </style>
     <script>
@@ -216,7 +267,13 @@
                 <a href="/team">Team</a>
                 <a href="/founderspass">Founders Pass</a>
                 <a href="/lore">Lore</a>
-                <a href="/amari" style="color:#ff2fff;">Amari</a>
+                <div class="dropdown">
+                  <button class="dropbtn">ARTISTS</button>
+                  <div class="dropdown-content">
+                    <a href="/amari">Amari</a>
+                    <a href="/skinnyfeelings">skinnyfeelings</a>
+                  </div>
+                </div>
             </nav>
             <nav id="Mobile-Nav" >
                 <div id="Mobile-Nav--List" style="margin-bottom:-40px">
@@ -227,6 +284,7 @@
                     <a href="/founderspass">Founders Pass</a>
                     <a href="/lore">Lore</a>
                     <a href="/amari" style="color:#ff2fff;">Amari</a>
+                    <a href="/skinnyfeelings">skinnyfeelings</a>
                     <div class="social">
                         <a href="https://discord.gg/playerzero" target="_blank" class="icon--discord">
                             <svg height="24" viewBox="0 0 21.97 25.351">
