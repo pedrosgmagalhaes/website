@@ -152,6 +152,7 @@ body {
   order: 1;
   text-align: center;
 }
+
 @media (max-width: 1200px) {
   #Masthead {
     flex-direction: column;
