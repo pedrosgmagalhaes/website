@@ -1092,7 +1092,7 @@ input#mc-embedded-subscribe {
     width: 100%;
   }
 
-  .Dontmissout-links img{
+  .Dontmissout-links img {
     height: auto;
     width: 40px;
     margin: 10px;
@@ -1101,7 +1101,7 @@ input#mc-embedded-subscribe {
   .awaitingtransmission-content {
     padding: 0;
   }
-  
+
 }
 
 @media (min-width: 1200px) {
@@ -1281,8 +1281,25 @@ input#mc-embedded-subscribe {
     justify-content: center;
   }
 
-  .awaitingtransmission-avatar img {
+  .awaitingtransmission-avatar {
+    height: 300px;
+    width: 300px;
+    background: rgb(247, 97, 223);
+    background: linear-gradient(321deg, rgba(247, 97, 223, 1) 0%, rgba(76, 39, 193, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80%;
+  }
+
+  .awaitingtransmission-elementor {
+    width: auto;
     border-radius: 50%;
+    min-height: 290px;
+    min-width: 290px;
+    background-image: url("./images/avatar.jpg");
+    background-size: cover;
+    background-position-y: center;
   }
 
   .awaitingtransmission-logo {
