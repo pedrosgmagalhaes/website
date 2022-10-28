@@ -35,7 +35,7 @@
 
 #Mobile-Nav--List a {
   color: white;
-  font-size: 40px;
+  font-size: 20px;
   line-height: 1;
   font-weight: 700;
   z-index: 2;
@@ -50,6 +50,7 @@
   transform: translateY(0);
   height: 100vh;
   z-index: 2;
+  width: 100vw;
 }
 
 #Mobile-Nav.active #Mobile-Nav--List {
