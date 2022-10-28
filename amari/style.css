@@ -1,140 +1,3 @@
-/* css reset */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-@font-face {
-  font-family: "Pirulen";
-  src: url("./fonts/pirulenrg.otf") format("truetype");
-}
-
 .image-logo {
   display: flex;
   justify-content: center;
@@ -516,6 +379,7 @@ body {
   .Playlist {
     min-height: 80vh !important;
     width: 100% !important;
+    margin-top: 15vw;
   }
 
   h1 {
@@ -544,7 +408,7 @@ body {
     width: 80vw !important;
   }
 
-  #FeaturedVideo {
+  /* #FeaturedVideo {
     width: 80vw !important;
   }
 
@@ -558,7 +422,7 @@ body {
 
   .awaitingtransmission-content {
     width: 80vw !important;
-  }
+  } */
 }
 
 #Masthead,
@@ -579,7 +443,7 @@ body {
 
   #Masthead,
   #Site-Footer {
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 
@@ -621,6 +485,8 @@ body {
   font: 12px/1 var(--f-pir);
   margin-bottom: 2px;
   z-index: 1;
+  padding: 0;
+  gap: 0;
 }
 
 #Masthead>* {
@@ -761,6 +627,7 @@ input#mc-embedded-subscribe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .awaitingtransmission-background h2 {
@@ -892,6 +759,14 @@ input#mc-embedded-subscribe {
   .awaitingtransmission-content .awaitingtransmission img {
     height: 27px;
     width: auto;
+  }
+
+  #Masthead {
+    font: 12px/1 var(--f-pir);
+    margin-bottom: 2px;
+    z-index: 1;
+    padding: 20px;
+    gap: 24px;
   }
 }
 
@@ -1259,11 +1134,12 @@ input#mc-embedded-subscribe {
 #CommunityPartner {
   padding-top: 8;
   padding-bottom: 5vh;
+  margin-top: 15vh;
+  width: 100%;
 }
 
 #CommunityPartner h1 {
   padding: 2vh;
-  font-size: 2rem;
 }
 
 .awaitingtransmission-avatar {
@@ -1331,6 +1207,10 @@ input#mc-embedded-subscribe {
 
   a#Logo2 {
         height: 40px;
+  }
+
+  #Masthead {
+    gap: 0;
   }
 }
 
@@ -1590,6 +1470,11 @@ input#mc-embedded-subscribe {
 
   .awaitingtransmission-footer-links {
     text-align: right;
+  }
+
+  #Masthead {
+    gap: 24px;
+    padding: 20px var(--unit-small);
   }
 }
 
