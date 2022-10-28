@@ -152,7 +152,6 @@ body {
   order: 1;
   text-align: center;
 }
-
 @media (max-width: 1200px) {
   #Masthead {
     flex-direction: column;
@@ -1466,7 +1465,7 @@ h2 {
   border: 0;
 }
 
-#CommunityPartener {
+#Partner-CB {
   --overlay-opacity: 0.5;
   min-height: 200px;
   display: flex;
@@ -1475,25 +1474,25 @@ h2 {
   gap: 16px;
   padding-block: 16px;
 }
-#CommunityPartener::before {
+#Partner-CB::before {
   background: white url("https://playerzero.xyz/i/cb-bg.webp") no-repeat top right/cover;
 }
-#CommunityPartener #CB-Logo {
+#Partner-CB #CB-Logo {
   position: absolute;
   width: 200px;
   left: 50%;
   transform: translateX(-50%);
 }
 @media (max-width: 880px) {
-  #CommunityPartener {
+  #Partner-CB {
     flex-direction: column;
   }
-  #CommunityPartener #CB-Logo {
+  #Partner-CB #CB-Logo {
     position: relative;
     left: initial;
     transform: none;
   }
-  #CommunityPartener h3 {
+  #Partner-CB h3 {
     text-align: center;
   }
 }
