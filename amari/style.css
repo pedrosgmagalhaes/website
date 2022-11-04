@@ -70,13 +70,36 @@
   display: none;
 }
 
+
+#mc_embed_signup .mc-field-group {
+  height: 50px;
+  padding: 0 !important;
+  width: 18rem !important;
+  clear: none !important;
+  border: 0 !important;
+  background: linear-gradient(
+    321deg,
+    rgba(247, 97, 223, 1) 0%,
+    rgba(76, 39, 193, 1) 100%
+  );
+}
+
+.mc-field-input {
+  background: black;
+  height: 45px;
+  margin: 3px;
+  padding: 5px;
+}
+
+input#mc-embedded-subscribe {
+  margin: 1em !important;
+}
+
 @media (max-width: 640px) {
   #Hamburger {
     display: flex;
   }
-}
 
-@media (min-width: 640px) {
   #Mobile {
     display: none;
   }
@@ -187,7 +210,6 @@ h2 {
   }
 }
 
-
 .no-scroll {
   height: 100%;
   overflow: hidden;
@@ -195,7 +217,7 @@ h2 {
 }
 
 @media (max-width: 640px) {
-  #Main-Nav>a {
+  #Main-Nav > a {
     display: none;
   }
 
@@ -203,7 +225,7 @@ h2 {
     display: none;
   }
 
-  #Main-Nav-Social>a {
+  #Main-Nav-Social > a {
     display: none;
   }
 }
@@ -264,12 +286,14 @@ img {
 
 .video-embed {
   position: relative;
-  margin-top: 40px;
+  margin-top: 20px;
   width: 100%;
   aspect-ratio: 16/9;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url("./images/story_background.svg") no-repeat center;
+  background-size: auto 100%;
 }
 
 .video-embed .video {
@@ -365,7 +389,11 @@ body {
     height: 150px;
     width: 150px;
     background: rgb(247, 97, 223);
-    background: linear-gradient(321deg, rgba(247, 97, 223, 1) 0%, rgba(76, 39, 193, 1) 100%);
+    background: linear-gradient(
+      321deg,
+      rgba(247, 97, 223, 1) 0%,
+      rgba(76, 39, 193, 1) 100%
+    );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -408,22 +436,6 @@ body {
     margin: 4px !important;
     width: 80vw !important;
   }
-
-  /* #FeaturedVideo {
-    width: 80vw !important;
-  }
-
-  #OriginStoryReview {
-    width: 80vw !important;
-  }
-
-  #CommunityPartner {
-    width: 80vw !important;
-  }
-
-  .amari-content {
-    width: 80vw !important;
-  } */
 }
 
 #Masthead,
@@ -441,15 +453,19 @@ body {
 }
 
 @media (max-width: 1200px) {
-
   #Masthead,
   #Site-Footer {
     flex-direction: column;
   }
 }
 
-@media (max-width: 560px) {
+@media (min-width: 640px) {
+  #Logo-Mobile {
+    display: none;
+  }
+}
 
+@media (max-width: 560px) {
   #Masthead,
   #Site-Footer {
     padding-inline: 16px;
@@ -490,15 +506,15 @@ body {
   gap: 0;
 }
 
-#Masthead>* {
+#Masthead > * {
   order: 1;
   text-align: center;
 }
 
 @media (max-width: 1200px) {
-
   #Masthead #Main-Nav {
     order: 2;
+    margin-top: -20px;
   }
 
   #Masthead #Logo {
@@ -590,7 +606,7 @@ input#mc-embedded-subscribe {
   overflow: hidden;
 }
 
-.img-bg>* {
+.img-bg > * {
   position: relative;
   z-index: 1;
 }
@@ -670,20 +686,13 @@ input#mc-embedded-subscribe {
 
 .amari-content .info {
   text-align: center;
-  padding: 32px 19px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
-  border: 2px solid;
+  align-items: flex-end;
   border-image-slice: 1;
-  border-width: 2px;
   position: relative;
-  background: linear-gradient(180deg,
-      rgba(188, 170, 203, 0.15) 0%,
-      rgba(152, 130, 170, 0) 100%);
-  margin: 15px;
-  backdrop-filter: blur(5px);
+  background: linear-gradient(to right, #4c27c1, #f761df);
 }
 
 #amari {
@@ -738,7 +747,7 @@ input#mc-embedded-subscribe {
   margin-top: 24px;
   text-transform: uppercase;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 24px;
   font-family: var(--f-fut-cond);
 }
@@ -853,8 +862,12 @@ input#mc-embedded-subscribe {
 
 #amari #Newsletter {
   --overlay-opacity: 0.5;
-  width: 100%;
-  background: linear-gradient(180deg, rgba(188, 170, 203, 0.15) 0%, rgba(152, 130, 170, 0) 100%);
+  width: 80%;
+  background: linear-gradient(
+    180deg,
+    rgba(188, 170, 203, 0.15) 0%,
+    rgba(152, 130, 170, 0) 100%
+  );
   backdrop-filter: blur(5px);
 }
 
@@ -874,7 +887,8 @@ input#mc-embedded-subscribe {
 }
 
 #amari #Newsletter::before {
-  background: black url("https://playerzero.xyz/i/pz-discord-bg.png") no-repeat center center/cover;
+  background: black url("https://playerzero.xyz/i/pz-discord-bg.png") no-repeat
+    center center/cover;
 }
 
 #amari #Newsletter-Form {
@@ -964,13 +978,10 @@ input#mc-embedded-subscribe {
 .send-mail-form .mc-field-group {
   border: 1px solid #fff;
   border-radius: 5px;
-  text-align: left;
-  padding-left: 15px;
   font-family: var(--f-fut);
-  margin-top: 32px;
+  padding: 0;
   width: 230px;
-  margin: 0 auto;
-  margin-bottom: 16px;
+  margin: 0;
 }
 
 .send-mail-form ::placeholder {
@@ -980,7 +991,6 @@ input#mc-embedded-subscribe {
 
 .send-mail-form #mc-embedded-subscribe {
   background-color: #fff;
-  width: 230px;
   border-radius: 5px;
   font-family: var(--f-pir);
   font-style: italic;
@@ -989,6 +999,8 @@ input#mc-embedded-subscribe {
   line-height: 140%;
   text-transform: uppercase;
   color: white;
+  width: 18rem;
+  border: 0 !important;
 }
 
 .amari-video {
@@ -1108,6 +1120,9 @@ input#mc-embedded-subscribe {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
 }
 
 .Dontmissout {
@@ -1127,15 +1142,20 @@ input#mc-embedded-subscribe {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black url("https://playerzero.xyz/i/cb-bg.webp") no-repeat top right/cover;
+  background: black url("https://playerzero.xyz/i/cb-bg.webp") no-repeat top
+    right/cover;
   min-height: 40vh;
   width: 100%;
 }
 
+.CommunityPartnerBackground a img {
+  height: 140px;
+}
+
 #CommunityPartner {
-  padding-top: 8;
   padding-bottom: 5vh;
   margin-top: 15vh;
+  margin-bottom: 5vh;
   width: 100%;
 }
 
@@ -1147,7 +1167,11 @@ input#mc-embedded-subscribe {
   height: 150px;
   width: 150px;
   background: rgb(247, 97, 223);
-  background: linear-gradient(321deg, rgba(247, 97, 223, 1) 0%, rgba(76, 39, 193, 1) 100%);
+  background: linear-gradient(
+    321deg,
+    rgba(247, 97, 223, 1) 0%,
+    rgba(76, 39, 193, 1) 100%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1164,6 +1188,39 @@ input#mc-embedded-subscribe {
   border-radius: 50%;
 }
 
+#amari .content-info {
+  width: 100%;
+  height: 98%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 52px 40px;
+  background: linear-gradient(
+    to top,
+    rgba(16, 9, 33, 1) 20%,
+    rgba(41, 38, 61, 1) 80%
+  );
+  backdrop-filter: blur(5px);
+}
+
+@media (min-width: 640px) {
+  .Dontmissout-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .Dontmissout-links img {
+    height: auto;
+    width: 40px;
+    margin: 10px;
+  }
+
+}
 @media (max-width: 640px) {
   .Playlist {
     display: flex;
@@ -1188,32 +1245,42 @@ input#mc-embedded-subscribe {
     height: auto;
   }
 
-  .Dontmissout-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    width: 100%;
-  }
-
-  .Dontmissout-links img {
-    height: auto;
-    width: 40px;
-    margin: 10px;
-  }
-
   .amari-content {
     padding: 0;
   }
 
   a#Logo2 {
-        height: 40px;
+    height: 40px;
   }
 
   #Masthead {
     gap: 0;
   }
 }
+
+#amari .info {
+  margin-top: 160px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 109px;
+  margin-left: 109px;
+  margin-bottom: 80px;
+  height: 474px;
+  padding: 0px;
+}
+
+#mc_embed_signup_scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+input#mce-EMAIL {
+  width: 100%;
+}
+
 
 @media (min-width: 1200px) {
   .amari-story #Origin-Youtube-Embed:after {
@@ -1250,9 +1317,11 @@ input#mc-embedded-subscribe {
     width: 624px;
     height: 322px;
     box-sizing: border-box;
-    background: linear-gradient(180deg,
-        rgba(188, 170, 203, 0.15) 0%,
-        rgba(152, 130, 170, 0) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(188, 170, 203, 0.15) 0%,
+      rgba(152, 130, 170, 0) 100%
+    );
     backdrop-filter: blur(5px);
   }
 
@@ -1300,20 +1369,6 @@ input#mc-embedded-subscribe {
     width: 100px;
     margin: 40px;
   }
-
-  #mc_embed_signup_scroll {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-  }
-
-  #mc_embed_signup .mc-field-group {
-    height: 50px;
-    width: 360px;
-  }
-
   .dontmissout-qrcode {
     width: auto;
     max-height: 300px;
@@ -1321,17 +1376,6 @@ input#mc-embedded-subscribe {
 
   .playlist img {
     padding: 1.5rem;
-  }
-
-  #amari .info {
-    margin-top: 160px;
-    display: flex;
-    flex-direction: row;
-    margin-right: 109px;
-    margin-left: 109px;
-    margin-bottom: 160px;
-    height: 474px;
-    padding: 0px;
   }
 
   .amari .icons {
@@ -1348,16 +1392,6 @@ input#mc-embedded-subscribe {
     width: 33%;
     height: 100%;
     padding: 52px 0;
-  }
-
-  #amari .content-info {
-    width: 67%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 52px 40px 52px 0;
   }
 
   #amari .content-info .amari,
@@ -1393,10 +1427,14 @@ input#mc-embedded-subscribe {
   }
 
   .amari-avatar {
-    height: 300px;
-    width: 300px;
+    height: 180px;
+    width: 180px;
     background: rgb(247, 97, 223);
-    background: linear-gradient(321deg, rgba(247, 97, 223, 1) 0%, rgba(76, 39, 193, 1) 100%);
+    background: linear-gradient(
+      321deg,
+      rgba(247, 97, 223, 1) 0%,
+      rgba(76, 39, 193, 1) 100%
+    );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1406,8 +1444,8 @@ input#mc-embedded-subscribe {
   .amari-elementor {
     width: auto;
     border-radius: 50%;
-    min-height: 290px;
-    min-width: 290px;
+    min-height: 172px;
+    min-width: 172px;
     background-image: url("./images/avatar.jpg");
     background-size: cover;
     background-position-y: center;
@@ -1426,7 +1464,7 @@ input#mc-embedded-subscribe {
     display: none;
   }
 
-  #amari .content-info .amari-inquiry>* {
+  #amari .content-info .amari-inquiry > * {
     font-family: var(--f-fut-cond);
     font-style: normal;
     font-weight: 700;
@@ -1448,17 +1486,20 @@ input#mc-embedded-subscribe {
     bottom: -300px;
     left: auto;
     filter: blur(190px);
-    background: linear-gradient(180deg,
-        rgba(188, 170, 203, 0.15) 0%,
-        rgba(152, 130, 170, 0) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(188, 170, 203, 0.15) 0%,
+      rgba(152, 130, 170, 0) 100%
+    );
     backdrop-filter: blur(5px);
   }
 
   .amari-content p {
-    font-weight: 400;
+    font-weight: 200;
     font-size: 20px;
     line-height: 132%;
     margin-bottom: 0px;
+    font-style: normal;
   }
 
   .amari-content p:first-child {
@@ -1473,10 +1514,7 @@ input#mc-embedded-subscribe {
     text-align: right;
   }
 
-  #Masthead {
-    gap: 24px;
-    padding: 20px var(--unit-small);
-  }
+
 }
 
 #Main-Nav .dropdown {
@@ -1484,6 +1522,13 @@ input#mc-embedded-subscribe {
 }
 
 @media (min-width: 641px) {
+
+  #Masthead {
+    gap: 24px;
+    padding: 20px var(--unit-small);
+    margin: 0;
+  }
+
   #Main-Nav .dropdown {
     display: block;
     position: relative;
