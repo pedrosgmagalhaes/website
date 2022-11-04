@@ -117,7 +117,7 @@ const RPC = "https://mainnet.infura.io/v3/54297732d5e249febec6978df023ee45";
 
         var ts = await CONTRACT_ADDRESS.totalSupply();
         
-        var loop = ts - 1;
+        var loop = ts;
         
         console.log(loop);
         
