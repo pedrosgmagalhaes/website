@@ -258,7 +258,7 @@ body {
   margin-top: auto;
 }
 #Hero::before {
-  background: white url("https://playerzero.xyz/i/pz-hero.webp") no-repeat center center/cover;
+  background: white url("https://playerzero-27d4b.ondigitalocean.app/i/pz-hero.webp") no-repeat center center/cover;
 }
 
 #PZ-Mark {
@@ -296,7 +296,7 @@ body {
 }
 
 #Upcoming-Drop::before {
-  background: black url("https://playerzero.xyz/i/pz-upcoming-bg.webp") no-repeat center center/cover;
+  background: black url("https://playerzero-27d4b.ondigitalocean.app/i/pz-upcoming-bg.webp") no-repeat center center/cover;
 }
 #Upcoming-Drop .container {
   display: flex;
@@ -484,7 +484,7 @@ h2 {
 }
 
 #Characters {
-  background: white url("https://playerzero.xyz/i/pz-treads.png") no-repeat center center/cover;
+  background: white url("https://playerzero-27d4b.ondigitalocean.app/i/pz-treads.png") no-repeat center center/cover;
   color: var(--grey);
 }
 #Characters p {
@@ -781,7 +781,7 @@ h2 {
 }
 #Lore::before,
 #Team-Hero::before {
-  background: black url("https://playerzero.xyz/i/pz-lore-bg.webp") no-repeat center center/cover;
+  background: black url("https://playerzero-27d4b.ondigitalocean.app/i/pz-lore-bg.webp") no-repeat center center/cover;
 }
 #Lore:hover,
 #Team-Hero:hover {
@@ -799,14 +799,14 @@ h2 {
 }
 
 #Discord::before {
-  background: black url("https://playerzero.xyz/i/pz-newsletter-bg.png") no-repeat center center/cover;
+  background: black url("https://playerzero-27d4b.ondigitalocean.app/i/pz-newsletter-bg.png") no-repeat center center/cover;
 }
 
 #Newsletter .frosted {
   align-items: flex-start;
 }
 #Newsletter::before {
-  background: black url("https://playerzero.xyz/i/pz-discord-bg.png") no-repeat center center/cover;
+  background: black url("https://playerzero-27d4b.ondigitalocean.app/i/pz-discord-bg.png") no-repeat center center/cover;
 }
 
 #Newsletter-Form {
@@ -854,7 +854,7 @@ h2 {
 }
 
 #Team-Members {
-  background: white url("https://playerzero.xyz/i/pz-team-bg.png") no-repeat center center/cover;
+  background: white url("https://playerzero-27d4b.ondigitalocean.app/i/pz-team-bg.png") no-repeat center center/cover;
   background-blend-mode: luminosity;
 }
 #Team-Members .social {
@@ -1037,7 +1037,7 @@ h2 {
   }
 }
 .bidding-interface #Bidding {
-  background: url("https://playerzero.xyz/presale/bg.png");
+  background: url("https://playerzero-27d4b.ondigitalocean.app/presale/bg.png");
   background-repeat: repeat;
   background-size: auto;
 }
@@ -1229,7 +1229,7 @@ h2 {
   padding: 0;
 }
 .bidding-interface #Short-Term-Roadmap {
-  background: url("https://playerzero.xyz/i/output-onlinepngtools.png") repeat center center/cover;
+  background: url("https://playerzero-27d4b.ondigitalocean.app/i/output-onlinepngtools.png") repeat center center/cover;
 }
 
 
@@ -1237,17 +1237,17 @@ h2 {
   padding: 0;
 }
 .bidding-interface #Pass-Overview .top::before {
-  background: white url("https://playerzero.xyz/i/PZ-overview-top-bg.webp") no-repeat center center/cover;
+  background: white url("https://playerzero-27d4b.ondigitalocean.app/i/PZ-overview-top-bg.webp") no-repeat center center/cover;
   opacity: 0.5 !important;
   filter: none !important;
 }
 .bidding-interface #Pass-Overview .middle::before {
-  background: white url("https://playerzero.xyz/i/PZ-overview-mid-bg.webp") no-repeat center center/cover;
+  background: white url("https://playerzero-27d4b.ondigitalocean.app/i/PZ-overview-mid-bg.webp") no-repeat center center/cover;
   opacity: 0.5 !important;
   filter: none !important;
 }
 .bidding-interface #Pass-Overview .bottom::before {
-  background: white url("https://playerzero.xyz/i/PZ-overview-bottom-bg.webp") no-repeat center center/cover;
+  background: white url("https://playerzero-27d4b.ondigitalocean.app/i/PZ-overview-bottom-bg.webp") no-repeat center center/cover;
   opacity: 0.5 !important;
   filter: none !important;
 }
@@ -1264,7 +1264,7 @@ h2 {
   width: min(400px, 100%);
 }
 .bidding-interface #Green-Room::before {
-  background: white url("https://playerzero.xyz/i/PZ-green-room-bg.webp") no-repeat center center/cover;
+  background: white url("https://playerzero-27d4b.ondigitalocean.app/i/PZ-green-room-bg.webp") no-repeat center center/cover;
   opacity: 0.5 !important;
   filter: none !important;
 }
@@ -1299,7 +1299,7 @@ h2 {
 }
 
 .bidding-interface #PZ-Universe::before {
-  background: white url("https://playerzero.xyz/i/PZ-universe-bg.webp") no-repeat center center/cover;
+  background: white url("https://playerzero-27d4b.ondigitalocean.app/i/PZ-universe-bg.webp") no-repeat center center/cover;
   opacity: 0.35 !important;
   filter: none !important;
 }
