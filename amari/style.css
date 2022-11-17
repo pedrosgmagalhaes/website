@@ -884,7 +884,7 @@ input#mc-embedded-subscribe {
 }
 
 #amari #Newsletter::before {
-  background: black url("https://playerzero.xyz/i/pz-discord-bg.png") no-repeat
+  background: black url("https://playerzero-27d4b.ondigitalocean.app/i/pz-discord-bg.png") no-repeat
     center center/cover;
 }
 
@@ -1149,7 +1149,7 @@ input#mc-embedded-subscribe {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black url("https://playerzero.xyz/i/cb-bg.webp") no-repeat top
+  background: black url("https://playerzero-27d4b.ondigitalocean.app/i/cb-bg.webp") no-repeat top
     right/cover;
   min-height: 40vh;
   width: 100%;
