@@ -658,7 +658,7 @@ input#mc-embedded-subscribe {
   width: 100%;
   overflow: hidden;
   padding-top: 20vh;
-  background: url("https://playerzero-27d4b.ondigitalocean.app/amari/images/stars.svg") no-repeat;
+  background: url("https://playerzero-27d4b.ondigitalocean.app/amari/images/stars.svg");
 }
 
 .amari-content:after {
