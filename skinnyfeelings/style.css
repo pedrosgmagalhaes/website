@@ -416,7 +416,7 @@ body {
 
 .skinnyfeelings-background {
   height: 628px;
-  background-image: url('https://playerzero-27d4b.ondigitalocean.app/skinnyfeelings/images/background-mob.jpg');
+  background-image: url('https://playerzero.xyz/skinnyfeelings/images/background-mob.jpg');
   background-size: cover;
   padding: 52px 20px;
   text-align: center;
@@ -639,7 +639,7 @@ body {
 }
 
 #skinnyfeelings #Newsletter::before {
-  background: black url("https://playerzero-27d4b.ondigitalocean.app/i/pz-discord-bg.png") no-repeat center center/cover;
+  background: black url("https://playerzero.xyz/i/pz-discord-bg.png") no-repeat center center/cover;
 }
 
 #skinnyfeelings #Newsletter-Form {
@@ -786,7 +786,7 @@ body {
   z-index: 100;
   top: 50%;
   left: 50%;
-  background-image: url('https://playerzero-27d4b.ondigitalocean.app/skinnyfeelings/images/play-button.png');
+  background-image: url('https://playerzero.xyz/skinnyfeelings/images/play-button.png');
   width: 105px;
   height: 105px;
   transform: translate(-50%, -50%);
@@ -961,7 +961,7 @@ body {
     justify-content: space-between;
     padding: 0 189px;
     align-items: center;
-    background-image: url('https://playerzero-27d4b.ondigitalocean.app/skinnyfeelings/images/background-desc.jpg');
+    background-image: url('https://playerzero.xyz/skinnyfeelings/images/background-desc.jpg');
   }
 
   .skinnyfeelings-background img {
