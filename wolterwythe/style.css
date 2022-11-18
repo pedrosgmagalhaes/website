@@ -193,6 +193,10 @@ h2 {
   font-size: 100px;
 }
 
+.wolterWytheImg {
+  width: 50rem;
+}
+
 @media (max-width: 640px) {
   h1 {
     font-size: 38px;
@@ -658,7 +662,7 @@ input#mc-embedded-subscribe {
   width: 100%;
   overflow: hidden;
   padding-top: 20vh;
-  background: url("https://playerzero-27d4b.ondigitalocean.app/wolterwythe/images/stars.svg") no-repeat;
+  background: url("https://playerzero-27d4b.ondigitalocean.app/wolterwythe/images/stars.svg");
 }
 
 .amari-content:after {
@@ -1188,7 +1192,7 @@ input#mc-embedded-subscribe {
 .amari-elementor {
   min-height: 145px;
   min-width: 145px;
-  background-image: url("https://playerzero-27d4b.ondigitalocean.app/wolterwythe/images/avatar.jpg");
+  background-image: url("https://playerzero-27d4b.ondigitalocean.app/wolterwythe/images/avatar.png");
   background-size: cover;
   background-position-y: center;
   width: auto;
@@ -1454,7 +1458,7 @@ input#mce-EMAIL {
     border-radius: 50%;
     min-height: 172px;
     min-width: 172px;
-    background-image: url("https://playerzero-27d4b.ondigitalocean.app/wolterwythe/images/avatar.png");
+    background-image: url("./images/avatar.png");
     background-size: cover;
     background-position-y: center;
   }
