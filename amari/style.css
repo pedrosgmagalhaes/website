@@ -366,6 +366,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font: normal 500 20px/1.25 var(--f-fut);
   color: white;
+  background: #08031c;
 }
 
 @media (max-width: 560px) {
@@ -1158,6 +1159,14 @@ input#mc-embedded-subscribe {
 
 .CommunityPartnerBackground a img {
   height: 140px;
+  width: auto;
+}
+
+@media (max-width: 820px) {
+  .CommunityPartnerBackground a img {
+    height: 80px;
+    width: auto;
+  }
 }
 
 #CommunityPartner {
