@@ -251,7 +251,7 @@ body {
   justify-content: center;
   width: 100%;
   position: relative;
-  /*padding-inline: var(--unit-mid);*/
+  /* padding-inline: var(--unit-mid); */
 }
 #Hero [class*=button] {
   justify-self: flex-end;

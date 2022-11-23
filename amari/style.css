@@ -408,7 +408,8 @@ body {
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
+    padding-inline: 4px;
   }
 
   .Dontmissout {
@@ -1157,6 +1158,14 @@ input#mc-embedded-subscribe {
 
 .CommunityPartnerBackground a img {
   height: 140px;
+  width: auto;
+}
+
+@media (max-width: 820px) {
+  .CommunityPartnerBackground a img {
+    height: 80px;
+    width: auto;
+  }
 }
 
 #CommunityPartner {
