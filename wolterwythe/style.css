@@ -292,7 +292,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("https://playerzero-27d4b.ondigitalocean.app/wolterwythe/images/story_background.svg") no-repeat center;
+  background: url("https://staging.playerzero.xyz/wolterwythe/images/story_background.svg") no-repeat center;
   background-size: auto 100%;
 }
 
@@ -664,7 +664,7 @@ input#mc-embedded-subscribe {
   width: 100%;
   overflow: hidden;
   padding-top: 20vh;
-  background: url("https://playerzero-27d4b.ondigitalocean.app/wolterwythe/images/stars.svg");
+  background: url("https://staging.playerzero.xyz/wolterwythe/images/stars.svg");
 }
 
 .amari-content:after {
@@ -700,7 +700,7 @@ input#mc-embedded-subscribe {
 
 #amari {
   background: #08031c;
-  background-image: url("https://playerzero-27d4b.ondigitalocean.app/wolterwythe/images/background.png");
+  background-image: url("https://staging.playerzero.xyz/wolterwythe/images/background.png");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -890,7 +890,7 @@ input#mc-embedded-subscribe {
 }
 
 #amari #Newsletter::before {
-  background: black url("https://playerzero-27d4b.ondigitalocean.app/i/pz-discord-bg.png") no-repeat
+  background: black url("https://staging.playerzero.xyz/i/pz-discord-bg.png") no-repeat
     center center/cover;
 }
 
@@ -1059,7 +1059,7 @@ input#mc-embedded-subscribe {
   z-index: 100;
   top: 50%;
   left: 50%;
-  background-image: url("https://playerzero-27d4b.ondigitalocean.app/wolterwythe/images/play-button.png");
+  background-image: url("https://staging.playerzero.xyz/wolterwythe/images/play-button.png");
   width: 105px;
   height: 105px;
   transform: translate(-50%, -50%);
@@ -1126,7 +1126,7 @@ input#mc-embedded-subscribe {
 }
 
 .Playlist {
-  background-image: url("https://playerzero-27d4b.ondigitalocean.app/wolterwythe/images/playlist_bd.png");
+  background-image: url("https://staging.playerzero.xyz/wolterwythe/images/playlist_bd.png");
   display: flex;
   min-height: 150vh;
   width: 100%;
@@ -1155,7 +1155,7 @@ input#mc-embedded-subscribe {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black url("https://playerzero-27d4b.ondigitalocean.app/i/cb-bg.webp") no-repeat top
+  background: black url("https://staging.playerzero.xyz/i/cb-bg.webp") no-repeat top
     right/cover;
   min-height: 40vh;
   width: 100%;
@@ -1194,7 +1194,7 @@ input#mc-embedded-subscribe {
 .amari-elementor {
   min-height: 145px;
   min-width: 145px;
-  background-image: url("https://playerzero-27d4b.ondigitalocean.app/wolterwythe/images/avatar.png");
+  background-image: url("https://staging.playerzero.xyz/wolterwythe/images/avatar.png");
   background-size: cover;
   background-position-y: center;
   width: auto;

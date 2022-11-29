@@ -12,10 +12,10 @@ var sticky = header.offsetTop;
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
-    // logo.src="https://playerzero-27d4b.ondigitalocean.app/i/logo1.svg"
+    // logo.src="https://staging.playerzero.xyz/i/logo1.svg"
     
   } else {
     header.classList.remove("sticky");
-    // logo.src="https://playerzero-27d4b.ondigitalocean.app/i/logo2.svg"
+    // logo.src="https://staging.playerzero.xyz/i/logo2.svg"
   }
 }
