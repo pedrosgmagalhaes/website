@@ -288,7 +288,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("./images/story_background.svg") no-repeat center;
+  background: url("./images/story_background.png") no-repeat center;
   background-size: auto 100%;
 }
 
@@ -658,7 +658,6 @@ input#mc-embedded-subscribe {
   width: 100%;
   overflow: hidden;
   padding-top: 20vh;
-  background: url("./images/stars.svg") no-repeat;
 }
 
 .amari-content:after {
