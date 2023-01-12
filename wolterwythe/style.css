@@ -193,6 +193,10 @@ h2 {
   font-size: 100px;
 }
 
+.wolterWytheImg {
+  width: 50rem;
+}
+
 @media (max-width: 640px) {
   h1 {
     font-size: 38px;
@@ -288,7 +292,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("./images/story_background.png") no-repeat center;
+  background: url("https://playerzero.xyz/wolterwythe/images/story_background.svg") no-repeat center;
   background-size: auto 100%;
 }
 
@@ -366,6 +370,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font: normal 500 20px/1.25 var(--f-fut);
   color: white;
+  background: #08031c;
 }
 
 @media (max-width: 560px) {
@@ -408,7 +413,8 @@ body {
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
+    padding-inline: 4px;
   }
 
   .Dontmissout {
@@ -658,6 +664,7 @@ input#mc-embedded-subscribe {
   width: 100%;
   overflow: hidden;
   padding-top: 20vh;
+  background: url("https://playerzero.xyz/wolterwythe/images/stars.svg");
 }
 
 .amari-content:after {
@@ -693,7 +700,7 @@ input#mc-embedded-subscribe {
 
 #amari {
   background: #08031c;
-  background-image: url("./images/background.png");
+  background-image: url("https://playerzero.xyz/wolterwythe/images/background.png");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1052,7 +1059,7 @@ input#mc-embedded-subscribe {
   z-index: 100;
   top: 50%;
   left: 50%;
-  background-image: url("./images/play-button.png");
+  background-image: url("https://playerzero.xyz/wolterwythe/images/play-button.png");
   width: 105px;
   height: 105px;
   transform: translate(-50%, -50%);
@@ -1119,7 +1126,7 @@ input#mc-embedded-subscribe {
 }
 
 .Playlist {
-  background-image: url("./images/playlist_bd.png");
+  background-image: url("https://playerzero.xyz/wolterwythe/images/playlist_bd.png");
   display: flex;
   min-height: 150vh;
   width: 100%;
@@ -1187,7 +1194,7 @@ input#mc-embedded-subscribe {
 .amari-elementor {
   min-height: 145px;
   min-width: 145px;
-  background-image: url("./images/avatar.jpg");
+  background-image: url("https://playerzero.xyz/wolterwythe/images/avatar.png");
   background-size: cover;
   background-position-y: center;
   width: auto;
@@ -1453,7 +1460,7 @@ input#mce-EMAIL {
     border-radius: 50%;
     min-height: 172px;
     min-width: 172px;
-    background-image: url("./images/avatar.jpg");
+    background-image: url("https://playerzero.xyz/wolterwythe/images/avatar.png");
     background-size: cover;
     background-position-y: center;
   }

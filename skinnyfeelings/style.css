@@ -241,6 +241,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font: normal 500 20px/1.25 var(--f-fut);
   color: white;
+  background: #08031c;
 }
 
 @media (max-width: 560px) {
@@ -416,7 +417,7 @@ body {
 
 .skinnyfeelings-background {
   height: 628px;
-  background-image: url('./images/background-mob.jpg');
+  background-image: url('https://playerzero.xyz/skinnyfeelings/images/background-mob.jpg');
   background-size: cover;
   padding: 52px 20px;
   text-align: center;
@@ -786,7 +787,7 @@ body {
   z-index: 100;
   top: 50%;
   left: 50%;
-  background-image: url('./images/play-button.png');
+  background-image: url('https://playerzero.xyz/skinnyfeelings/images/play-button.png');
   width: 105px;
   height: 105px;
   transform: translate(-50%, -50%);
@@ -961,7 +962,7 @@ body {
     justify-content: space-between;
     padding: 0 189px;
     align-items: center;
-    background-image: url('./images/background-desc.jpg');
+    background-image: url('https://playerzero.xyz/skinnyfeelings/images/background-desc.jpg');
   }
 
   .skinnyfeelings-background img {
