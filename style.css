@@ -257,8 +257,17 @@ body {
   justify-content: center;
   width: 100%;
   position: relative;
-  /* padding-inline: var(--unit-mid); */
+  margin-top: -5rem;
+  padding: 0 var(--unit-small);
 }
+
+@media (max-width: 800px) {
+  #Hero {
+    padding: unset;
+    margin-top: unset;
+  }
+}
+
 #Hero [class*=button] {
   justify-self: flex-end;
   /*margin-top: auto;*/
